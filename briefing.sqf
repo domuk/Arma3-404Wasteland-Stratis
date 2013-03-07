@@ -26,6 +26,17 @@ player createDiaryRecord["changelog",
 ]
 ];
 
+player createDiaryRecord["changelog",
+[
+"1.03",
+"
+<br/>
+		[Added] - Light Armed Vehicle Mission (All armed cars).<br/>
+        [Removed] - All armed cars from initial spawn for balance.<br/>
+"
+]
+];
+
 player createDiaryRecord["404games",
 [
 "Credits",

@@ -23,11 +23,12 @@ if (_type == 0) then {
 	//Clear Cars Inventory
     clearMagazineCargoGlobal _car;
     clearWeaponCargoGlobal _car;
-
+	
 	//Set Cars Attributes
     _car setFuel (0.50);
     _car setDamage (random 0.50);
     _car setDir (random 360);
+	_car disableTIEquipment true;
     [_car] call randomWeapons;
 
 	//Set original posistion then add to vehicle array
@@ -51,6 +52,7 @@ if (_type == 1) then {
     _car setFuel (0.50);
     _car setDamage (random 0.50);
     _car setDir (random 360);
+	_car disableTIEquipment true;
     [_car] call randomWeapons;
 
 	//Set authenticity
@@ -75,6 +77,7 @@ if (_type == 2) then {
     _car setDamage (random 0.50);
     _car setDir (random 360);
     _car setVehicleAmmo (random 0.90);
+	_car disableTIEquipment true;
     [_car] call randomWeapons;
 
 	//Set original posistion then add to vehicle array

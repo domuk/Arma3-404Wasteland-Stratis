@@ -34,7 +34,7 @@ diag_log format["WASTELAND SERVER - Main Mission Resumed: %1",_missionType];
 
 [_missionMarkerName,_randomPos,_missionType] call createClientMarker;
 
-_vehicleClass = ["BTR40_MG_TK_GUE_EP1","GAZ_Vodnik_HMG","GAZ_Vodnik","BRDM2_HQ_TK_GUE_EP1","BRDM2_TK_GUE_EP1"] call BIS_fnc_selectRandom;
+_vehicleClass = ["O_Galkin_GMG_F","B_Hunter_HMG_F","B_Hunter_RCWS_F","O_Galkin_MG_F"] call BIS_fnc_selectRandom;
 
 //Vehicle Class, Posistion, Fuel, Ammo, Damage
 _vehicle = [_vehicleClass,_randomPos,0.1,1,0.75,"NONE"] call createMissionVehicle;
@@ -42,7 +42,8 @@ _vehicle = [_vehicleClass,_randomPos,0.1,1,0.75,"NONE"] call createMissionVehicl
 _picture = getText (configFile >> "cfgVehicles" >> typeOf _vehicle >> "picture");
 _vehicleName = getText (configFile >> "cfgVehicles" >> typeOf _vehicle >> "displayName");
 _hint = parseText format ["<t align='center' color='%4' shadow='2' size='1.75'>Main Objective</t><br/><t align='center' color='%4'>------------------------------</t><br/><t align='center' color='%5' size='1.25'>%1</t><br/><t align='center'><img size='5' image='%2'/></t><br/><t align='center' color='%5'>A<t color='%4'> %3</t>, has been spoted in the area marked</t>", _missionType, _picture, _vehicleName, mainMissionColor, subTextColor];
-[nil,nil,rHINT,_hint] call RE;
+messageSystem = _hint;
+publicVariable "messageSystem";
 
 CivGrpM = createGroup civilian;
 [CivGrpM,_randomPos] spawn createMidGroup;
@@ -71,6 +72,7 @@ waitUntil
 };
 
 _vehicle setVehicleLock "UNLOCKED";
+_vehicle disableTIEquipment true;
 _vehicle setVariable ["R3F_LOG_disabled", false, true];
 
 if(_result == 1) then
@@ -80,13 +82,15 @@ if(_result == 1) then
     {deleteVehicle _x;}forEach units CivGrpM;
     deleteGroup CivGrpM;
     _hint = parseText format ["<t align='center' color='%4' shadow='2' size='1.75'>Objective Failed</t><br/><t align='center' color='%4'>------------------------------</t><br/><t align='center' color='%5' size='1.25'>%1</t><br/><t align='center'><img size='5' image='%2'/></t><br/><t align='center' color='%5'>Objective failed, better luck next time</t>", _missionType, _picture, _vehicleName, failMissionColor, subTextColor];
-	[nil,nil,rHINT,_hint] call RE;
+	messageSystem = _hint;
+	publicVariable "messageSystem";
     diag_log format["WASTELAND SERVER - Main Mission Failed: %1",_missionType];
 } else {
 	//Mission Complete.
     deleteGroup CivGrpM;
     _hint = parseText format ["<t align='center' color='%4' shadow='2' size='1.75'>Objective Complete</t><br/><t align='center' color='%4'>------------------------------</t><br/><t align='center' color='%5' size='1.25'>%1</t><br/><t align='center'><img size='5' image='%2'/></t><br/><t align='center' color='%5'>The light armored vehicle has been captured</t>", _missionType, _picture, _vehicleName, successMissionColor, subTextColor];
-	[nil,nil,rHINT,_hint] call RE;
+	messageSystem = _hint;
+	publicVariable "messageSystem";
     diag_log format["WASTELAND SERVER - Main Mission Success: %1",_missionType];
 };
 

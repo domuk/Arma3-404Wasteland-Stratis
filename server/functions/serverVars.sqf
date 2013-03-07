@@ -59,13 +59,8 @@ civilianVehicles = ["c_offroad","B_Quadbike_F", "O_Quadbike_F"];
 militaryVehicles = ["c_offroad","O_Galkin_F","B_Hunter_F"];
 
 //Armed Military Vehicle List - Random Spawns
-armedMilitaryVehicles = ["O_Galkin_MG_F",
-                            "B_Hunter_F",
-                            "B_Hunter_RCWS_F",
-                             "B_Hunter_HMG_F",
-                            "O_Galkin_F",
-                            "O_Galkin_GMG_F"];
-
+armedMilitaryVehicles = ["B_Hunter_F","O_Galkin_F"];
+                            
 //Object List - Random Spawns.
 objectList = ["Land_Barrelwater_F",
 			"Land_Fireplace_F",

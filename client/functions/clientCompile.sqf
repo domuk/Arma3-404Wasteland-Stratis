@@ -39,4 +39,3 @@ loadGunStore = compile preprocessFileLineNumbers "client\systems\gunStore\loadGu
 player groupChat "Client Compile Complete";
 sleep 1;
 playerCompiledScripts = true;
-
