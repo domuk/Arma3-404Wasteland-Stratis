@@ -103,14 +103,14 @@ cityList = [
 		["Town_1",200,"Air Station Mike-28"],
 		["Town_2",100,"Agios Loannis"],
 		["Town_3",100,"Agios Cephas"],
-		["Town_4",200,"Girna"],			
-		["Town_5",200,"Camp Tempest"],
+		["Town_4",175,"Girna"],			
+		["Town_5",175,"Camp Tempest"],
 		["Town_6",250,"Stratis Airbase Town"],
-		["Town_7",200,"Stratis Airbase Runway"],
-		["Town_8",300,"Agia Marina"],
-		["Town_9",200,"Kill Farm"],
-		["Town_10",250,"Camp Rogain"],
-		["Town_11",200,"Kamino Firing Range"],
-		["Town_12",350,"Camp Maxwell"]
+		["Town_7",180,"Stratis Airbase Runway"],
+		["Town_8",290,"Agia Marina"],
+		["Town_9",150,"Kill Farm"],
+		["Town_10",210,"Camp Rogain"],
+		["Town_11",180,"Kamino Firing Range"],
+		["Town_12",220,"Camp Maxwell"]
 ];
 cityLocations = [];

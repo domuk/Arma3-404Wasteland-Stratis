@@ -96,19 +96,19 @@ class R3F_LOG_dlg_contenu_vehicule
 		};
 		
 		textureNoShortcut = "";
-		animTextureNormal = "\ca\ui\data\ui_button_normal_ca.paa";
-		animTextureDisabled = "\ca\ui\data\ui_button_disabled_ca.paa";
-		animTextureOver = "\ca\ui\data\ui_button_over_ca.paa";
-		animTextureFocused = "\ca\ui\data\ui_button_focus_ca.paa";
-		animTexturePressed = "\ca\ui\data\ui_button_down_ca.paa";
-		animTextureDefault = "\ca\ui\data\ui_button_default_ca.paa";
+		animTextureNormal = "client\ui\ui_button_normal_ca.paa";
+		animTextureDisabled = "client\ui\ui_button_disabled_ca.paa";
+		animTextureOver = "client\ui\ui_button_over_ca.paa";
+		animTextureFocused = "client\ui\ui_button_focus_ca.01.paa";
+		animTexturePressed = "client\ui\ui_button_down_ca.paa";
+		animTextureDefault = "client\ui\ui_button_default_ca.paa";
 		period = 0.4;
 		font = "Zeppelin32";
 		
-		soundEnter[] = {"\ca\ui\data\sound\mouse2", 0.09, 1};
-		soundPush[] = {"\ca\ui\data\sound\new1", 0.09, 1};
-		soundClick[] = {"\ca\ui\data\sound\mouse3", 0.07, 1};
-		soundEscape[] = {"\ca\ui\data\sound\mouse1", 0.09, 1};
+		soundEnter[] = {"\A3\ui_f\data\Sound\MOUSE2", 0.09, 1};
+		soundPush[] = {"\A3\ui_f\data\Sound\NEW1", 0.09, 1};
+		soundClick[] = {"\A3\ui_f\data\Sound\MOUSE3", 0.07, 1};
+		soundEscape[] = {"\A3\ui_f\data\Sound\MOUSE1", 0.09, 1};
 		
 		class Attributes 
 		{
@@ -140,8 +140,8 @@ class R3F_LOG_dlg_contenu_vehicule
 		colorBackground[] = {0.8,0.8,0.8,1};
 		colorSelectBackground[] = {0, 0, 0, 1};
 		colorScrollbar[] = {0.2, 0.2, 0.2, 1};
-		arrowEmpty = "\ca\ui\data\ui_arrow_combo_ca.paa";
-		arrowFull = "\ca\ui\data\ui_arrow_combo_active_ca.paa";
+		arrowEmpty = "client\ui\ui_arrow_combo_ca.paa";
+        arrowFull = "client\ui\ui_arrow_combo_active_ca.paa";
 		wholeHeight = 0.45;
 		rowHeight = 0.06;
 		color[] = {0.8, 0.8, 0.8, 1};
@@ -162,10 +162,10 @@ class R3F_LOG_dlg_contenu_vehicule
 			color[] = {1, 1, 1, 0.6};
 			colorActive[] = {1, 1, 1, 1};
 			colorDisabled[] = {1, 1, 1, 0.3};
-			thumb = "\ca\ui\data\ui_scrollbar_thumb_ca.paa";
-			arrowFull = "\ca\ui\data\ui_arrow_top_active_ca.paa";
-			arrowEmpty = "\ca\ui\data\ui_arrow_top_ca.paa";
-			border = "\ca\ui\data\ui_border_scroll_ca.paa";
+			thumb = "client\ui\ui_scrollbar_thumb_ca.paa";
+			arrowFull = "client\ui\ui_arrow_top_active_ca.paa";
+			arrowEmpty = "client\ui\ui_arrow_top_ca.paa";
+			border = "client\ui\ui_border_scroll_ca.paa";
 		};
 	};
 	// FIN Définition des classes de base

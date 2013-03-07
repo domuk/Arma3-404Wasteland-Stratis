@@ -25,7 +25,9 @@ _player selectWeapon "hgun_P07_F";
 
 if(str(playerSide) in ["WEST"]) then
 {
-    removeAllWeapons _player;
+    _player unassignItem "NVGoggles"; 
+	_player removeItem "NVGoggles";
+	removeAllWeapons _player;
     _player addMagazine "16Rnd_9x21_Mag";
     _player addMagazine "16Rnd_9x21_Mag";
 	_player addWeapon "hgun_P07_F";
@@ -34,7 +36,9 @@ if(str(playerSide) in ["WEST"]) then
 
 if(str(playerSide) in ["EAST"]) then
 {
-    removeAllWeapons _player;
+    _player unassignItem "NVGoggles"; 
+	_player removeItem "NVGoggles";
+	removeAllWeapons _player;
     _player addMagazine "16Rnd_9x21_Mag";
     _player addMagazine "16Rnd_9x21_Mag";
 	_player addWeapon "hgun_P07_F";
@@ -43,7 +47,12 @@ if(str(playerSide) in ["EAST"]) then
 
 if(str(playerSide) in ["GUER"]) then
 {
-    removeAllWeapons _player;
+    _player unassignItem "NVGoggles"; 
+	_player removeItem "NVGoggles"; 
+	removeAllWeapons _player;
+	removeUniform _player;
+	_uniform = ["U_C_Poloshirt_tricolour","U_C_Poloshirt_salmon","U_C_Commoner1_3","U_C_Commoner1_2"] call BIS_fnc_selectRandom;
+	_player addUniform _uniform;
     _player addMagazine "16Rnd_9x21_Mag";
     _player addMagazine "16Rnd_9x21_Mag";
 	_player addWeapon "hgun_P07_F";
@@ -64,7 +73,7 @@ _player setVariable["fuel",0,false];
 _player setVariable["repairkits",0,false];
 _player setVariable["fuelFull", 0, false];
 _player setVariable["fuelEmpty", 1, false];
-_player setVariable["bombs",false,false];
+//_player setVariable["bombs",false,false];
 _player setVariable["spawnBeacon",0,false];
 _player setVariable["camonet",0,false];
 

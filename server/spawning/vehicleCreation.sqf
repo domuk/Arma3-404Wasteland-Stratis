@@ -17,7 +17,7 @@ if (_type == 0) then {
     _cartype = civilianVehicles select (random (count civilianVehicles - 1));
     _car = createVehicle [_cartype,_pos,[], 20,"None"];
     _car setpos [getpos _car select 0,getpos _car select 1,0];
-	_car setVehicleInit "nul=[this, 300, 3600, 0, false] execVM 'server\functions\vehicle.sqf'";
+	_car setVehicleInit "nul=[this, 60, 1200, 0, false] execVM 'server\functions\vehicle.sqf'";
 	processInitCommands;
     
 	//Clear Cars Inventory
@@ -28,7 +28,6 @@ if (_type == 0) then {
     _car setFuel (0.50);
     _car setDamage (random 0.50);
     _car setDir (random 360);
-	_car setVelocity [0,0,1];
     [_car] call randomWeapons;
 
 	//Set original posistion then add to vehicle array
@@ -41,7 +40,7 @@ if (_type == 1) then {
     _cartype = militaryVehicles select (random (count militaryVehicles - 1));
     _car = createVehicle [_cartype,_pos, [], 30, "None"];
     _car setpos [getpos _car select 0,getpos _car select 1,0];
-	_car setVehicleInit "nul=[this, 300, 0, 0, false] execVM 'server\functions\vehicle.sqf'";
+	_car setVehicleInit "nul=[this, 60, 1200, 0, false] execVM 'server\functions\vehicle.sqf'";
 	processInitCommands;
     
 	//Clear Cars Inventory
@@ -52,7 +51,6 @@ if (_type == 1) then {
     _car setFuel (0.50);
     _car setDamage (random 0.50);
     _car setDir (random 360);
-	_car setVelocity [0,0,1];
     [_car] call randomWeapons;
 
 	//Set authenticity
@@ -65,7 +63,7 @@ if (_type == 2) then {
     _cartype = armedMilitaryVehicles select (random (count armedMilitaryVehicles - 1));
     _car = createVehicle [_cartype,_pos, [], 30, "None"];
     _car setpos [getpos _car select 0,getpos _car select 1,0];
-    _car setVehicleInit "nul=[this, 300, 0, 0, false] execVM 'server\functions\vehicle.sqf'";
+    _car setVehicleInit "nul=[this, 60, 1200, 0, false] execVM 'server\functions\vehicle.sqf'";
 	processInitCommands;
 
 	//Clear Cars Inventory
@@ -77,7 +75,6 @@ if (_type == 2) then {
     _car setDamage (random 0.50);
     _car setDir (random 360);
     _car setVehicleAmmo (random 0.90);
-	_car setVelocity [0,0,1];
     [_car] call randomWeapons;
 
 	//Set original posistion then add to vehicle array

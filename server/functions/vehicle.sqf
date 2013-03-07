@@ -101,7 +101,7 @@ while {_run} do
 	#else
 	_currTime = floor(time);
 	#endif
-    if(_currTime - _startTime >= 300) then {_result = 1;};
+    if(_currTime - _startTime >= 30) then {_result = 1;};
         
 	if(_result == 1) then
     {

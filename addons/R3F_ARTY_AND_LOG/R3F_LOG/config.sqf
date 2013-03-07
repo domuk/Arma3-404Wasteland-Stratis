@@ -181,4 +181,4 @@ R3F_LOG_CFG_objets_deplacables = [
  * Liste des fichiers ajoutant des objets dans les tableaux de fonctionnalités logistiques (ex : R3F_LOG_CFG_remorqueurs)
  * Ajoutez une inclusion vers votre nouveau fichier ici si vous souhaitez utilisez la logistique avec un nouvel addon.
  */
-#include "addons_config\arma2_CO_objects.sqf"
+//#include "addons_config\arma2_CO_objects.sqf"
