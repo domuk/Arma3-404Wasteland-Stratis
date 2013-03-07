@@ -13,7 +13,7 @@ _car = _this select 0;
 _additionArray = vehicleAddition;
 _num = floor (random 100);
 if (_num < 75) then { _car addWeaponCargoGlobal ["Binocular", 1]};
-if (_num < 15) then { _car addWeaponCargoGlobal ["NVgoggles", 1]};
+if (_num < 15) then { _car addItemCargoGlobal ["NVGoggles", 1]};
 
 //Get Random Gun From randomWeapons Array.
 _weapon = vehicleWeapons select (random (count vehicleWeapons - 1));
