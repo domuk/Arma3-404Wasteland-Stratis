@@ -1,0 +1,192 @@
+/*%FSM<COMPILE "g:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, WastelandServClean">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"init",0,250,-129.773132,322.530823,-39.773125,372.530823,0.000000,"init"};
+item1[] = {"Initialised",4,218,-136.478760,411.939178,-46.478760,461.939178,0.000000,"Initialised"};
+item2[] = {"prepare",2,250,-140.949173,492.406738,-50.949158,542.406738,0.000000,"prepare"};
+item3[] = {"true",8,218,-314.953247,585.106140,-224.953308,635.106140,0.000000,"true"};
+item4[] = {"waiting",2,250,-254.874100,740.597168,-164.874084,790.597168,0.000000,"waiting"};
+item5[] = {"dead_clean",4,218,-75.793655,805.288635,14.206394,855.288635,2.000000,"dead clean"};
+item6[] = {"true",8,218,-327.951965,1002.615784,-237.951843,1052.616577,0.000000,"true"};
+item7[] = {"clean_dead",2,250,-75.445755,939.287415,14.554310,989.287415,0.000000,"clean dead"};
+item8[] = {"cleanup",2,250,-402.685669,755.484253,-312.685638,805.484192,0.000000,"cleanup"};
+link0[] = {0,1};
+link1[] = {1,2};
+link2[] = {2,3};
+link3[] = {3,4};
+link4[] = {4,5};
+link5[] = {4,6};
+link6[] = {5,7};
+link7[] = {6,8};
+link8[] = {7,6};
+link9[] = {8,3};
+globals[] = {0.000000,0,0,0,0,640,480,1,15,6316128,1,-504.199982,246.400131,1145.926270,295.246155,630,714,1};
+window[] = {0,-1,-1,-1,-1,1059,200,1313,200,1,648};
+*//*%FSM</HEAD>*/
+class FSM
+{
+  fsmName = "WastelandServClean";
+  class States
+  {
+    /*%FSM<STATE "init">*/
+    class init
+    {
+      name = "init";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Initialised">*/
+        class Initialised
+        {
+          priority = 0.000000;
+          to="prepare";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!isnil ""bis_fnc_init"""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "prepare">*/
+    class prepare
+    {
+      name = "prepare";
+      init = /*%FSM<STATEINIT""">*/"private [""_lastSyncTime"", ""_lastCleanDead"",""_lastCleanRubbish""];" \n
+       "diag_log (""CLEANUP: INITIALIZING CLEANUP SCRIPT"");" \n
+       "" \n
+       "_lastCleanDead = time;" \n
+       "_lastCleanRubbish = time;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "true">*/
+        class true
+        {
+          priority = 0.000000;
+          to="waiting";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "waiting">*/
+    class waiting
+    {
+      name = "waiting";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "dead_clean">*/
+        class dead_clean
+        {
+          priority = 2.000000;
+          to="clean_dead";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"((time - _lastCleanDead) > 1000)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_lastCleanDead = time;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "true">*/
+        class true
+        {
+          priority = 0.000000;
+          to="cleanup";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "clean_dead">*/
+    class clean_dead
+    {
+      name = "clean_dead";
+      init = /*%FSM<STATEINIT""">*/"//diag_log (""CLEANUP: PERFORMING BODY CLEANUP"");" \n
+       "" \n
+       "_delQtyP = 0;" \n
+       "_delQtyAI = 0;" \n
+       "_delQtyTP = 0;" \n
+       "" \n
+       "{" \n
+       "	if (local _x) then {" \n
+       "		if (_x isKindOf ""Priest"") then {" \n
+       "			deleteVehicle _x;" \n
+       "			_delQtyAI = _delQtyAI + 1;" \n
+       "		} else {" \n
+       "			if (_x isKindOf ""CAManBase"") then {" \n
+       "				_deathTime = _x getVariable [""processedDeath"", time];" \n
+       "				if (time - _deathTime > 1200) then {" \n
+       "					{" \n
+       "						deleteVehicle _x;" \n
+       "						_delQtyTP = _delQtyTP + 1;" \n
+       "						" \n
+       "					} forEach (nearestobjects [_x, [""Land_Teapot_EP1"",""Land_Bag_EP1""],  12] );" \n
+       "					deleteVehicle _x;" \n
+       "					_delQtyP = _delQtyP + 1;" \n
+       "				};" \n
+       "			};" \n
+       "		};" \n
+       "	};" \n
+       "} forEach allDead;" \n
+       "" \n
+       "//diag_log (""CLEANUP: Deleted "" + str(_delQtyP) + "" players, "" + str(_delQtyAI) + "" AI, "" +  str(_delQtyTP) + "" Water, "");" \n
+       "" \n
+       "{" \n
+       "	//diag_log (""CLEANUP: CHECKING GROUP WITH "" + str(count units _x) + "" UNITS"");" \n
+       "	if (count units _x==0) then {" \n
+       "		deleteGroup _x;" \n
+       "		//diag_log (""CLEANUP: DELETING A GROUP"");" \n
+       "	};" \n
+       "} forEach allGroups;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "true">*/
+        class true
+        {
+          priority = 0.000000;
+          to="cleanup";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "cleanup">*/
+    class cleanup
+    {
+      name = "cleanup";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "true">*/
+        class true
+        {
+          priority = 0.000000;
+          to="waiting";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+  };
+  initState="init";
+  finalStates[] =
+  {
+  };
+};
+/*%FSM</COMPILE>*/

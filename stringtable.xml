@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Wasteland">
+	<Package name="General">
+		<Key ID="STR_WL_Gen_TeamWEST">
+			<English>BLUFOR</English>
+		</Key>
+		<Key ID="STR_WL_Gen_TeamWEST_2">
+			<English>BLUFOR</English>
+		</Key>
+		<Key ID="STR_WL_Gen_TeamEAST">
+			<English>OPFOR</English>
+		</Key>
+		<Key ID="STR_WL_Gen_TeamEAST_2">
+			<English>OPFOR</English>
+		</Key>
+		<Key ID="STR_WL_Gen_TeamGUER">
+			<English>Independent</English>
+		</Key>
+		<Key ID="STR_WL_Gen_TeamGUER_2">
+			<English>Independent</English>
+		</Key>
+		<Key ID="STR_WL_Gen_Warning">
+			<English>Warning!</English>
+		</Key>
+	</Package>
+	<Package name="Loading">
+		<Key ID="STR_WL_Loading_Teamkiller">
+			<English>You are considered team-killer and therefore not allowed in BLUFOR or OPFOR teams. You will shortly be kicked back to the lobby where you can only join Independent and killing anyone is allowed.</English>
+		</Key>
+		<Key ID="STR_WL_Loading_Teamswitched">
+			<English>You have played as %1 for too long and cannot switch to the other team. You can still play as Independent.</English>
+		</Key>
+	</Package>
+	<Package name="Gameplay">
+		<Key ID="STR_WL_Action_Refuel_DriverSeat">
+			<English>Please enter driver seat before attempting to refuel the vehicle.</English>
+		</Key>
+	</Package>
+	<Package name="WelcomeMessage">
+		<Key ID="STR_WL_WelcomeToWasteland">
+			<English>&lt;t color='#FF9E9E' size='2.5' &gt;Welcome to 404Wasteland&lt;t color='#FFFFFF' size='1' &gt;</English>
+		</Key>
+		<Key ID="STR_WL_YouAreInTeam">
+			<English>&lt;t color='#FF9E9E' size='2.5' &gt;Instructions&lt;br/&gt;&lt;t color='#FFFFFF' size='1.5' &gt;&#127;You are in &lt;img size="1.5" image="%1"/&gt; &lt;t color="%2"&gt;%3&lt;/t&gt; team.&lt;br/&gt;&#127;Attacking or stealing from other %4 players is &lt;t color="#aa0000"&gt;FORBIDDEN.&lt;/t&gt;&lt;br/&gt;&#127;No VOIP/VON in GLOBAL&lt;br/&gt;&#127;The server does restart unexpectedly.&lt;br/&gt;&#127;You will be locked to your team after 3 minutes.&lt;/t&gt;</English>
+		</Key>
+		<Key ID="STR_WL_YouAreInFFA">
+			<English>&lt;t color='#FF9E9E' size='2.5' &gt;Instructions&lt;br/&gt;&lt;t color='#FFFFFF' size='1.5' &gt;&#127;You are in &lt;img size="1.5" image="%1"/&gt; &lt;t color="%2"&gt;%3&lt;/t&gt; team.&lt;br/&gt;&#127;You are &lt;t color="#00aa00"&gt;FREE TO ATTACK ANYONE.&lt;/t&gt;&lt;br/&gt;&#127;No VOIP/VON in GLOBAL&lt;br/&gt;&#127;The server does restart unexpectedly.&lt;/t&gt;</English>
+		</Key>
+		<Key ID="STR_WL_MapMoreInfo">
+			<English>&lt;t color='#FFFFFF' size='1.5' &gt;Welcome to 404Wasteland ArmA 3 Alpha. &lt;br/&gt;Please report all bugs/problems to http://www.404games.co.uk/bugs&lt;br/&gt;Server restart times: 6AM/6PM (GMT)&lt;br/&gt;For more info please see the map&lt;br/&gt;&lt;br/&gt;&lt;/t&gt;</English>
+		</Key>
+	</Package>
+	<Package name="TeamKillWarningMessage">
+		<Key ID="STR_TK_MESSAGE">
+			<English>&lt;t size='2' color='#ff0000'&gt;Team killing is against the rules!&lt;/t&gt;&lt;br/&gt;If this was a mistake then you must explain yourself and say sorry, otherwise they will mark you as team-killer and you will get kicked.</English>
+		</Key>
+	</Package>
+	<Package name="Diary">
+		<Key ID="STR_WL_Diary_RulesContent">
+			<English>&lt;br/&gt;    1. Keep bad language to a minimum. If you have a problem with another player, take it to direct.&lt;br/&gt;    2. NO VOIP IN GLOBAL. We have a public TeamSpeak for players to use.&lt;br/&gt;    3. Team killing or stealing from team mates when you BLUFOR or OPFOR is forbidden and punishable. Play as Independent if you want to be free for all.&lt;br/&gt;    4. Revealing information about your (ex)team to other teams is strictly forbidden&lt;br/&gt;    5. Do not exploit R3F or any other add-ons or you will be banned.&lt;br/&gt;    6. Using or spamming with loud\long custom sound commands will cause punishment up to permanent ban</English>
+		</Key>
+	</Package>
+	<Package name="Shop">
+		<Key ID="STR_WL_Shop_Marker_GunStore">
+			<English>Gun store</English>
+		</Key>
+		<Key ID="STR_WL_Shop_Marker_GenStore">
+			<English>General store</English>
+		</Key>
+		<Key ID="STR_WL_Shop_Marker_Empty">
+			<English>Unoccupied</English>
+		</Key>
+		<Key ID="STR_WL_Shop_Marker_Enemy">
+			<English>Enemy players here</English>
+		</Key>
+		<Key ID="STR_WL_Shop_Marker_Friendly">
+			<English>Friendly players</English>
+		</Key>
+		<Key ID="STR_WL_Shop_Marker_Mixed">
+			<English>Enemy and friendly players</English>
+		</Key>
+		<Key ID="STR_WL_Shop_Message_EnemyApproaching">
+			<English>Enemy player just entered the area</English>
+		</Key>
+	</Package>
+	<Package name="ShopDescriptions">
+		<Key ID="STR_WL_ShopDescriptions_Water">
+			<English>4O4Games Premium Spring Water. This water contains 200% more flavour than other leading brands.</English>
+		</Key>
+		<Key ID="STR_WL_ShopDescriptions_Camo">
+			<English>Become a ninja, hide yourself while camping. Warning this does not make you invisible</English>
+		</Key>
+		<Key ID="STR_WL_ShopDescriptions_CanFood">
+			<English>4O4Games Value Cat food. Heat treated and sealed in a 100% steel can for extra long shelf life. Warning: contents may contain organs.</English>
+		</Key>
+		<Key ID="STR_WL_ShopDescriptions_RepairKit">
+			<English>This magic box will repair any mechanical device to its former glory. Warning: 4O4Games cannot guarantee compatibility with wives/spouses/partners.</English>
+		</Key>
+		<Key ID="STR_WL_ShopDescriptions_MedKit">
+			<English>Restore your health back to full. Disclaimer: This product was tested on animals and at least 5 bunnies, 3 cows and 1 make-up wearing pig died as a result.</English>
+		</Key>
+		<Key ID="STR_WL_ShopDescriptions_fuelFull">
+			<English>Top quality imported Russian petroleum, now with 10% less Stalin!</English>
+		</Key>
+		<Key ID="STR_WL_ShopDescriptions_fuelEmpty">
+			<English>Straight off the back of a lorry, this 'can will last a lifetime.</English>
+		</Key>
+		<Key ID="STR_WL_ShopDescriptions_spawnBeacon">
+			<English>Choose your spawn location. Disclaimer: This product does not guarantee safe delivery of goods.</English>
+		</Key>
+	</Package>
+	<Package name="Dialogs">
+		<Key ID="STR_WL_dialog_TeamkillText">
+			<English>You have been team-killed by %2 player %1.&lt;br/&gt;&lt;br/&gt;If this was an accident then forgive them, otherwise they should explain their actions.&lt;br/&gt;&lt;br/&gt;If the player does not explain why then select Punish or Announce.</English>
+		</Key>
+	</Package>
+	<Package name="Actions">
+		<Key ID="STR_WL_Acts_PlayerMenu">
+			<English>Player Menu</English>
+		</Key>
+	</Package>
+	<Package name="Errors">
+		<Key ID="STR_WL_Errors_InProgress">
+			<English>YOU ARE ALREADY PERFORMING ANOTHER ACTION!</English>
+		</Key>
+		<Key ID="STR_WL_Errors_InVehicle">
+			<English>YOU ARE CURRENTLY BUSY!</English>
+		</Key>
+		<Key ID="STR_WL_Errors_BeaconActive">
+			<English>YOU ALREADY HAVE AN ACTIVE SPAWN BEACON!</English>
+		</Key>
+		<Key ID="STR_WL_Errors_BeaconInVehicle">
+			<English>YOU CANNOT ENTER A VEHICLE WHILE PLACING A SPAWN BEACON!</English>
+		</Key>		
+		<Key ID="STR_WL_Errors_BeaconTooMany">
+			<English>YOU ARE ALREADY HAVE TOO MANY OF THAT OBJECT!</English>
+		</Key>						
+	</Package>
+</Project>
