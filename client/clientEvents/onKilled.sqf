@@ -66,7 +66,7 @@ _to_delete = [];
 _to_delete_quick = [];
 
 if((_player getVariable "cmoney") > 0) then {
-	_m = "EvMoney" createVehicle (position _player);
+	_m = "Land_Sack_F" createVehicle (position _player);
 	_m setVariable["money", (_player getVariable "cmoney"), true];
 	_m setVariable ["owner", "world", true];
 	_to_delete = _to_delete + [_m];

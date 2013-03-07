@@ -128,7 +128,16 @@ if ((_uid in moderators) OR (_uid in administrators) OR (_uid in serverAdministr
 			    };
 	            case 5: //Test Function
 			    {
-					
+                    _group = createGroup civilian;
+					_leader = _group createunit ["C_man_polo_1_F", getPos player, [], 0.5, "Form"];
+                    
+					_leader addMagazine "RPG32_F";
+					_leader addMagazine "RPG32_F";
+					_leader addWeapon "launch_RPG32_F";
+					_leader addMagazine "30Rnd_65x39_case_mag";
+					_leader addMagazine "30Rnd_65x39_case_mag";
+					_leader addMagazine "30Rnd_65x39_case_mag";
+					_leader addWeapon "arifle_TRG20_F";
 			    };
 			};		
 	    };

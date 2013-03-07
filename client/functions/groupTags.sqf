@@ -53,7 +53,7 @@ while {true} do
     _storeInteractionZone = 3; // The furthest away the player can be from a store to interact with it. Higher = further.
     _currPos = getPosATL player;
         
-    _gunStore = nearestObjects [_currPos, ["CIV_Contractor1_BAF"], _storeInteractionZone];    
+    _gunStore = nearestObjects [_currPos, ["C_man_1_1_F"], _storeInteractionZone];    
     _genStore = nearestObjects [_currPos, ["TK_CIV_Takistani04_EP1"], _storeInteractionZone];  
      
     if (!isNull (_gunStore select 0)) then {  

@@ -22,7 +22,7 @@ aActionsIDs = aActionsIDs + [player addAction["Take bottle of water", "noscript.
 aActionsIDs = aActionsIDs + [player addAction["Fill Water Bottle", "noscript.sqf", ' player setVariable["water",(player getVariable "water")+1,true]; hint "You have filled a water bottle";',1,false,false,"",' player distance (nearestobjects [player, ["Land_pumpa"],  3] select 0) < 3 and (player getVariable "water")<4']];
 
 //Pickup Money
-aActionsIDs = aActionsIDs + [player addAction["Pickup Money", "client\actions\pickupMoney.sqf", [], 1, false, false, "", 'player distance (nearestobjects [player, ["EvMoney"],  5] select 0) < 5']];
+aActionsIDs = aActionsIDs + [player addAction["Pickup Money", "client\actions\pickupMoney.sqf", [], 1, false, false, "", 'player distance (nearestobjects [player, ["Land_Sack_F"],  5] select 0) < 5']];
 
 //Pickup SpawnBeacon (Satelit)
 aActionsIDs = aActionsIDs + [player addAction[("<t color=""#E01B1B"">Destroy spawn beacon</t>"), "client\actions\pickupBeacon.sqf", 1, 1, false, false, "", '_currBeacon = (nearestobjects [player, ["Satelit"],  5]); player distance (_currBeacon select 0) < 5; ((nearestObjects[player, ["Satelit"], 3] select 0) getVariable "ownerUID") == (getPlayerUID player) OR str(playerSide) != ((nearestObjects[player, ["Satelit"], 3] select 0) getVariable "faction") OR ((nearestObjects[player, ["Satelit"], 3] select 0) getVariable "faction") == "WORLD"']];

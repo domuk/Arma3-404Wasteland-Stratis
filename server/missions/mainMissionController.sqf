@@ -22,7 +22,8 @@ diag_log format["WASTELAND SERVER - Started Main Mission State"];
     [mission_Outpost,"mission_Outpost"],
     [mission_RadarTruck,"mission_RadarTruck"]];
 */
-_MMarray = [[mission_Heli,"mission_Heli"]];
+_MMarray = [[mission_ArmedHeli,"mission_ArmedHeli"],
+			[mission_CivHeli,"mission_CivHeli"]];
             
 _lastMission = "nomission";
 while {true} do
@@ -47,7 +48,7 @@ while {true} do
     diag_log format["WASTELAND SERVER - Execute New Main Mission: %1",_missionType];
     _hint = parseText format ["<t align='center' color='%2' shadow='2' size='1.75'>Main Objective</t><br/><t align='center' color='%2'>------------------------------</t><br/><t color='%3' size='1.0'>Starting in %1 Minutes</t>", mainMissionDelayTime / 60, mainMissionColor, subTextColor];
 	messageSystem = _hint;
-    publicVariable "messageSystem";
+	publicVariable "messageSystem";
     _lastMission = _missionType;
 	waitUntil{sleep 0.1; scriptDone _missionRunning};
     sleep 5; 

@@ -4,8 +4,13 @@ player createDiarySubject ["wasteland", "What is Wasteland?"];
 
 player createDiaryRecord["changelog",
 [
-"0.1",
+"1.01",
 "
+<br/>
+		[Fixed] - Gun Stores<br/>
+		[Fixed] - Missions<br/>
+		[Fixed] - General UI<br/>
+		[Fixed] - Lots of other fixes<br/>
 "
 ]
 ];

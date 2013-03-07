@@ -14,58 +14,74 @@
 //Gunstore Weapon List - Gun Store Base List
 // Text name, classname, buy cost, sell amount
 weaponsArray = [
-	["AK-74","AK_74",50,25],
-	["AK-107 Kobra","AK_107_kobra",75,35],
-	["AKM","AK_47_M",75,35],
-    ["M16A4","M16A4",75,35],
-    ["M4A1","M4A1",50,25],
-    ["M4A1 CCO","M4A1_Aim",100,55],
-    ["M1014","M1014",50,25],
-    ["Saiga 12K","Saiga12K",100,55],
-    ["M249","M249_EP1",250,120],
-    ["Mk_48 Mod","Mk_48",250,140],
-    ["M240","M240",250,120],
-    ["Pecheneg","Pecheneg",250,100],
-    ["RPG-7","RPG7V",300,130],
-    ["SMAW","SMAW",300,175],
-    ["Stinger","Stinger",1000,550],
-    ["Javelin","Javelin",1500,750],
-    ["Mk12 SPR","M4SPR",200,120],
-    ["Mk17 Sniper","SCAR_H_LNG_Sniper",500,233],
-    ["Mk17 Sniper SD","SCAR_H_LNG_Sniper_SD",750,455],
-    ["M110 NV","M110_NVG_EP1",1000,666],
-    ["Mk17 Sniper TWS","SCAR_H_STD_TWS_SD",1500,755],
-    ["M107","m107",2000,850],
-    ["M110 TWS","M110_TWS_EP1",2500,1000]
+		//Handgun
+	["P07","hgun_P07_F",40,20],
+    ["Rook-40","hgun_Rook40_F",40,20], 
+    	//Underwater Gun
+	["SDAR","arifle_SDAR_F",100,50],
+    	//Assault Rifle
+	["MX","arifle_MX_F",100,50],
+	["TRG-21","arifle_TRG21_F",100,50],
+    ["TRG-20","arifle_TRG20_F",100,50],
+    ["MXC","arifle_MXC_F",100,50],
+    ["Katiba","arifle_Khaybar_F",100,50],
+    ["Katiba Carabine","arifle_Khaybar_C_F",100,50],
+    ["MX 3GL","arifle_MX_GL_F",200,100],
+    ["Katiba GL","arifle_Khaybar_GL_F",200,100],
+    ["EBR","srifle_EBR_F",250,100], 
+    	//Light Machine Gun
+    ["MX SW","arifle_MX_SW_F",250,100],
+    ["Mk200","LMG_Mk200_F",250,100],
+		//Assault Rifle
+    ["TRG-21 EGLM","arifle_TRG21_GL_F",275,150],
+    	//Rocket
+    ["NLAWr","launch_NLAW_F",300,200],
+    ["RPG-42 Alamut","launch_RPG32_F",300,200],
+    	//Sniper
+    ["MXM","arifle_MXM_F",450,300]
 ];
 
 //Gun Store Ammo List
 //Text name, classname, buy cost
 ammoArray = [
-	["30Rnd AK","30Rnd_545x39_AK",10],
-	["AKM Mag","30Rnd_762x39_AK47",10],
-	["30Rnd. STANAG","30Rnd_556x45_Stanag",10],
-    ["30Rnd. STANAG SD","30Rnd_556x45_StanagSD",30],
-    ["Mk17 Mag.","20Rnd_762x51_B_SCAR",25],
-	["Mk17 SD Mag.","20Rnd_762x51_SB_SCAR",50],
-	["10Rnd. M107","10Rnd_127x99_m107",50],
-	["8Rnd. M1014 Slug","8Rnd_B_Beneli_74Slug",10],
-	["8Rnd. Saiga 12K Slug","8Rnd_B_Saiga12_74Slug",10],
-	["200Rnd. M249 Belt","200Rnd_556x45_M249",50],
-	["100Rnd. M240","100Rnd_762x51_M240",25],
-	["PKM Mag.","100Rnd_762x54_PK",25],
-    ["PG-7V.","PG7V",85],
-    ["SMAW-HEAA","SMAW_HEAA",100],
-    ["Stinger Ammo","Stinger",225],
-    ["Javelin Ammo","Javelin",250]
+	["9mm 16Rnd Mag","16Rnd_9x21_Mag",10],
+	["5.56mm 20Rnd Mag","20Rnd_556x45_UW_mag",10],
+	["7.62mm 20Rnd Mag","20Rnd_762x45_Mag",10],
+    ["6.5mm 30Rnd CL Mag","30Rnd_65x39_caseless_mag",30],
+    ["6.5mm 30Rnd C Mag","30Rnd_65x39_case_mag",25],
+	["6.5mm 100Rnd Belt","100Rnd_65x39_caseless_mag_Tracer",50],
+	["6.5mm 200Rnd Belt","200Rnd_65x39_cased_Box",10],
+	["NLAW Missile","NLAW_F",100],
+    ["RPG32 Missile","RPG32_F",100],
+    ["RPG32 AA Missile","RPG32_AA_F",100],
+	["Explosive Charge","DemoCharge_Remote_Mag",100],
+    ["Explosive Satchel","SatchelCharge_Remote_Mag",100],
+    ["AT Mine","ATMine_Range_Mag",100],
+    ["M6 SLAM Mine","SLAMDirectionalMine_Wire_Mag",100],
+    ["Claymore Charge","ClaymoreDirectionalMine_Remote_Mag",100],
+    ["APERS Mine","APERSMine_Range_Mag",100],
+    ["APERS Bounding Mine","APERSBoundingMine_Range_Mag",100],
+    ["APERS Tripwire Mine","APERSTripMine_Wire_Mag",100]
 ];
 
 //Gun Store Equipment List
 //Text name, classname, buy cost
 accessoriesArray = [
-	["Range Finder","Binocular_Vector",500],
-	["NV Goggles","NVGoggles",100],
-    ["GPS","ItemGPS", 90]
+	["GPS","ItemGPS", 100,"item"],
+	["Binoculars","Binocular",100,"binoc"],
+	["NV Goggles","NVGoggles",100,"binoc"],
+    ["First Aid","FirstAidKit", 100,"item"],
+    ["Medkit","Medikit", 100,"item"],
+    ["Toolkit","ToolKit", 100,"item"],
+  	["Suppressor 9mm","muzzle_snds_L", 100,"item"],
+    ["Suppressor 7.82mm","muzzle_snds_B", 100,"item"],
+    ["Suppressor 6.5mm","muzzle_snds_H", 100,"item"],
+    ["LMG Suppressor 6.5mm","muzzle_snds_H_MG", 100,"item"],
+    ["Flash Light","acc_flashlight", 100,"item"],
+    ["RCO Sight","optic_Hamr", 100,"item"],
+    ["Holosight","optic_Holosight", 100,"item"],
+    ["ARCO Sight","optic_Arco", 100,"item"],
+    ["ACO Sight","optic_Aco", 100,"item"]
 ];
 
 //General Store Item List

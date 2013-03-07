@@ -213,26 +213,36 @@ switch(_switch) do
 				}
 			}forEach ammoArray;
 
-			{if(_itemText == _x select 0) then{
-				_class = _x select 1;
-				if(_class == "Binocular_Vector" OR _class== "NVGoggles") then
-				{
-					if((_playerSlots select 5) >= 1) then
-					{
-						player addWeapon _class;
-					}
-					else
-					{
-						{if(_x select 1 == _class) then{_price = _x select 2; _name = _x select 0;};}forEach accessoriesArray;
-						gunStoreCart = gunStoreCart - _price;
-						hint format["You do not have space for this item %1",_name];
-					};
-				}
-				else
-				{
-					player addWeapon _class;
+			{
+                if(_itemText == _x select 0) then
+                {
+                    _class = _x select 1;
+					switch((_x select 3)) do
+                    {
+                    	case "binoc":
+                        {
+                            if((_playerSlots select 5) >= 1) then
+							{
+								player addWeapon _class;
+							}
+							else
+							{
+								{if(_x select 1 == _class) then{_price = _x select 2; _name = _x select 0;};}forEach accessoriesArray;
+								gunStoreCart = gunStoreCart - _price;
+								hint format["You do not have space for this item %1",_name];
+							};
+                        };
+                        case "item":
+                        {
+                            player addItem _class;
+                        };
+                        case default
+                        {
+                            
+                        };
+                    };
 				};
-			}}forEach accessoriesArray;
+            }forEach accessoriesArray;
 		};
 
 		player setVariable["cmoney",_playerMoney - gunStoreCart,true];

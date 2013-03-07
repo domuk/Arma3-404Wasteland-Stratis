@@ -5,18 +5,21 @@ class Mission
 	{
 		"a3_map_stratis",
 		"A3_Characters_F_BLUFOR",
-		"A3_Characters_F_OPFOR"
+		"A3_Characters_F_OPFOR",
+		"A3_Weapons_F",
+		"A3_Characters_F_Civil"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Characters_F_BLUFOR",
 		"A3_Characters_F_OPFOR",
+		"A3_Characters_F_Civil",
 		"a3_map_stratis"
 	};
 	randomSeed=14957468;
 	class Intel
 	{
-		briefingName="404 Wasteland v1.0 Alpha";
+		briefingName="404 Wasteland v1.01 Alpha";
 		briefingDescription="A harsh survival sandbox";
 		resistanceWest=0;
 		startWeather=0.84999996;
@@ -33,7 +36,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=35;
+		items=38;
 		class Item0
 		{
 			side="WEST";
@@ -1054,10 +1057,70 @@ class Mission
 				};
 			};
 		};
+		class Item35
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3463.2358,143.47209,2645.8423};
+					azimut=180;
+					id=65;
+					side="LOGIC";
+					vehicle="C_man_1_1_F";
+					leader=1;
+					skill=0.60000002;
+					text="gunStore1";
+					init="this addEventHandler['handledamage', {false}]; this disableAI 'MOVE'; this DisableAI 'ANIM'; this disableAI 'FSM'; removeAllWeapons this; this setPos(getMarkerPos 'Store_Gun_1');";
+				};
+			};
+		};
+		class Item36
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5523.6626,77.968788,4716.9604};
+					azimut=180;
+					id=66;
+					side="LOGIC";
+					vehicle="C_man_1_1_F";
+					leader=1;
+					skill=0.60000002;
+					text="gunStore2";
+					init="this addEventHandler['handledamage', {false}]; this disableAI 'MOVE'; this DisableAI 'ANIM'; this disableAI 'FSM'; removeAllWeapons this; this setPos(getMarkerPos 'Store_Gun_2');";
+				};
+			};
+		};
+		class Item37
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2451.7969,74.056961,5679.2129};
+					azimut=180;
+					id=67;
+					side="LOGIC";
+					vehicle="C_man_1_1_F";
+					leader=1;
+					skill=0.60000002;
+					text="gunStore3";
+					init="this addEventHandler['handledamage', {false}]; this disableAI 'MOVE'; this DisableAI 'ANIM'; this disableAI 'FSM'; removeAllWeapons this; this setPos(getMarkerPos 'Store_Gun_3');";
+				};
+			};
+		};
 	};
 	class Markers
 	{
-		items=147;
+		items=150;
 		class Item0
 		{
 			position[]={4339.3457,226.45149,3824.2236};
@@ -1995,6 +2058,27 @@ class Mission
 			position[]={3578.4893,50.42506,6224.0972};
 			name="Spawn_90";
 			type="Empty";
+		};
+		class Item147
+		{
+			position[]={3463.0647,143.46271,2645.6714};
+			name="Store_Gun_1";
+			type="Empty";
+			colorName="ColorBrown";
+		};
+		class Item148
+		{
+			position[]={5523.4912,77.977371,4716.7896};
+			name="Store_Gun_2";
+			type="Empty";
+			colorName="ColorBrown";
+		};
+		class Item149
+		{
+			position[]={2451.6255,74.042847,5679.042};
+			name="Store_Gun_3";
+			type="Empty";
+			colorName="ColorBrown";
 		};
 	};
 };

@@ -65,7 +65,7 @@ _trackMarker = {
 
 	_markerName = "PG_hitmarker" + str(_lastpos)+str(random 100000);
 	createMarkerLocal [_markerName,_lastpos];
-	_markerName setMarkerTypeLocal "DOT";
+	_markerName setMarkerTypeLocal "mil_dot";
 	_markerName setMarkerColorLocal "ColorRed";
 	//_markerName setMarkerSizeLocal [.3,.3];
 	_markerName setMarkerAlphaLocal 1;

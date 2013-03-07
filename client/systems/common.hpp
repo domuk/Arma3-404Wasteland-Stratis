@@ -438,37 +438,20 @@ class w_RscCombo {
 	sizeEx = 0.025000;
 	rowHeight = 0.025000;
 	wholeHeight = "4 * 0.2";
-	color[] = {
-			1, 1, 1, 1
-	};
-	colorText[] = {
-			0, 0, 0, 1
-	};
-	colorBackground[] = {
-			1, 1, 1, 1
-	};
-	colorSelect[] = {
-			1, 0, 0, 1
-	};
-	colorSelectBackground[] = {
-			0, 1, 0, 1
-	};
-	soundSelect[] = {
-			"", 0.000000, 1
-	};
-	soundExpand[] = {
-			"", 0.000000, 1
-	};
-	soundCollapse[] = {
-			"", 0.000000, 1
-	};
+	color[] = {1, 1, 1, 1};
+	colorText[] = {0, 0, 0, 1};
+	colorBackground[] = {1, 1, 1, 1};
+	colorSelect[] = {1, 0, 0, 1};
+	colorSelectBackground[] = {0, 1, 0, 1};
+	soundSelect[] = {"", 0.000000, 1};
+	soundExpand[] = {"", 0.000000, 1};
+	soundCollapse[] = {"", 0.000000, 1};
 	maxHistoryDelay = 10;
 	autoScrollSpeed = -1;
 	autoScrollDelay = 5;
 	autoScrollRewind = 0;
-	colorScrollbar[] = {
-			0.950000, 0.950000, 0.950000, 1
-	};
+	colorScrollbar[] = {0.950000, 0.950000, 0.950000, 1};
+
 	period = 1;
 	thumb = "client\ui\ui_scrollbar_thumb_ca.paa";
 	arrowFull = "client\ui\ui_arrow_top_active_ca.paa";
@@ -479,7 +462,7 @@ class w_RscCombo {
 		{
 			color[] = {1, 1, 1, 1};
 			colorActive[] = {1, 1, 1, 1};
-			colorDisabled[] = {1, 1, 1, 1};
+			//colorDisabled[] = {1, 1, 1, 1};
 			thumb = "client\ui\ui_scrollbar_thumb_ca.paa";
 			arrowFull = "client\ui\data\ui_arrow_top_active_ca.paa";
 			arrowEmpty = "client\ui\data\ui_arrow_top_ca.paa";

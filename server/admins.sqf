@@ -23,9 +23,8 @@ administrators = [];
 //Bombeh
 publicVariable "administrators";
 
-serverAdministrators = ["11436085", //Tom
-					"33428672", //Pulse
-					"7274203" //Dom
-                    ]; 
- //Ally
+serverAdministrators = ["11436085",
+					"33428672",
+					"7274203",
+                    "22866057"];
 publicVariable "serverAdministrators";

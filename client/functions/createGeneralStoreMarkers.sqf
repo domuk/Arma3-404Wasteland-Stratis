@@ -16,7 +16,7 @@ waitUntil {{!isNull(missionNamespace getVariable _x) && ((getPos(missionNamespac
     deleteMarkerLocal _markerName;
 	_marker = createMarkerLocal [_markerName, getPos _unit];
 	_markerName setMarkerShapeLocal "ICON";
-    _markerName setMarkerTypeLocal "Dot";
+    _markerName setMarkerTypeLocal "mil_dot";
     _markerName setMarkerColorLocal "ColorOrange";
 	_markerName setMarkerSizeLocal [1,1];
 	_markerName setMarkerTextLocal "General Store";
