@@ -19,7 +19,7 @@ class Mission
 	randomSeed=14957468;
 	class Intel
 	{
-		briefingName="404 Wasteland v1.03 Alpha";
+		briefingName="404 Wasteland v1.05 Alpha";
 		briefingDescription="A harsh survival sandbox";
 		resistanceWest=0;
 		startWeather=0.10000001;
@@ -1066,8 +1066,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3463.2358,143.47209,2645.8423};
-					azimut=180;
+					position[]={4147.7075,157.70811,3307.1665};
+					azimut=157;
 					id=65;
 					side="LOGIC";
 					vehicle="C_man_1_1_F";
@@ -1086,8 +1086,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={5523.6626,77.968788,4716.9604};
-					azimut=180;
+					position[]={5522.9912,77.353127,4698.0908};
+					azimut=352;
 					id=66;
 					side="LOGIC";
 					vehicle="C_man_1_1_F";
@@ -1106,8 +1106,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={2451.7969,74.056961,5679.2129};
-					azimut=180;
+					position[]={2461.9829,74.104134,5692.8682};
+					azimut=173;
 					id=67;
 					side="LOGIC";
 					vehicle="C_man_1_1_F";
@@ -1348,7 +1348,7 @@ class Mission
 		};
 		class Item32
 		{
-			position[]={3908.884,38.251423,6639.5098};
+			position[]={3796.5962,18.528755,6639.5093};
 			name="heliSpawn_1";
 			type="Empty";
 			colorName="ColorGreen";
@@ -1362,21 +1362,21 @@ class Mission
 		};
 		class Item34
 		{
-			position[]={4019.6731,99.027229,7269.6387};
+			position[]={3973.2095,86.811913,7316.1021};
 			name="heliSpawn_3";
 			type="Empty";
 			colorName="ColorGreen";
 		};
 		class Item35
 		{
-			position[]={3535.0164,4.7984343,5973.8516};
+			position[]={3248.4897,10.044919,6357.1782};
 			name="heliSpawn_4";
 			type="Empty";
 			colorName="ColorGreen";
 		};
 		class Item36
 		{
-			position[]={4490.4648,69.590179,6252.7383};
+			position[]={4478.8486,60.1096,6113.3467};
 			name="heliSpawn_5";
 			type="Empty";
 			colorName="ColorGreen";
@@ -1390,14 +1390,14 @@ class Mission
 		};
 		class Item38
 		{
-			position[]={4123.8887,106.70888,5040.4028};
+			position[]={4209.0718,137.8638,5021.0425};
 			name="heliSpawn_7";
 			type="Empty";
 			colorName="ColorGreen";
 		};
 		class Item39
 		{
-			position[]={2468.3088,52.23959,5179.3667};
+			position[]={2335.136,79.208435,3010.6533};
 			name="heliSpawn_8";
 			type="Empty";
 			colorName="ColorGreen";
@@ -1411,14 +1411,14 @@ class Mission
 		};
 		class Item41
 		{
-			position[]={3872.3174,149.86519,4388.7134};
+			position[]={3651.6145,184.27214,4485.5127};
 			name="heliSpawn_10";
 			type="Empty";
 			colorName="ColorGreen";
 		};
 		class Item42
 		{
-			position[]={3409.9053,87.436287,3497.4312};
+			position[]={3830.374,183.16658,3703.0669};
 			name="heliSpawn_11";
 			type="Empty";
 			colorName="ColorGreen";
@@ -1432,7 +1432,7 @@ class Mission
 		};
 		class Item44
 		{
-			position[]={4108.0835,58.827492,2959.9712};
+			position[]={4556.8535,77.093063,2709.9106};
 			name="heliSpawn_13";
 			type="Empty";
 			colorName="ColorGreen";
@@ -1446,63 +1446,63 @@ class Mission
 		};
 		class Item46
 		{
-			position[]={2671.5623,32.044243,2241.2515};
+			position[]={2337.9685,112.43558,2444.6626};
 			name="heliSpawn_15";
 			type="Empty";
 			colorName="ColorGreen";
 		};
 		class Item47
 		{
-			position[]={2355.5364,108.63762,1624.0684};
+			position[]={2519.2759,124.23178,1622.3892};
 			name="heliSpawn_16";
 			type="Empty";
 			colorName="ColorGreen";
 		};
 		class Item48
 		{
-			position[]={5576.9961,108.51379,4953.5952};
+			position[]={5631.2041,129.99216,5003.9316};
 			name="heliSpawn_17";
 			type="Empty";
 			colorName="ColorGreen";
 		};
 		class Item49
 		{
-			position[]={6212.9868,6.5812926,5478.3037};
+			position[]={6197.499,9.0683069,5408.6079};
 			name="heliSpawn_18";
 			type="Empty";
 			colorName="ColorGreen";
 		};
 		class Item50
 		{
-			position[]={5654.6133,79.39135,5915.5098};
+			position[]={5596.5332,76.08403,5981.3335};
 			name="heliSpawn_19";
 			type="Empty";
 			colorName="ColorGreen";
 		};
 		class Item51
 		{
-			position[]={5309.8691,54.160568,6336.5942};
+			position[]={5038.8301,77.763458,6572.7856};
 			name="heliSpawn_20";
 			type="Empty";
 			colorName="ColorGreen";
 		};
 		class Item52
 		{
-			position[]={3733.5955,54.096329,7571.7144};
+			position[]={3772.3154,78.737488,5782.8579};
 			name="heliSpawn_21";
 			type="Empty";
 			colorName="ColorGreen";
 		};
 		class Item53
 		{
-			position[]={4603.0732,82.499962,5601.0474};
+			position[]={4610.8169,68.577065,5527.4795};
 			name="heliSpawn_22";
 			type="Empty";
 			colorName="ColorGreen";
 		};
 		class Item54
 		{
-			position[]={4450.0156,97.585182,2816.4048};
+			position[]={4114.2197,161.73592,3320.0981};
 			name="heliSpawn_23";
 			type="Empty";
 			colorName="ColorGreen";
@@ -2026,7 +2026,7 @@ class Mission
 		};
 		class Item141
 		{
-			position[]={4126.7363,169.78316,3354.9429};
+			position[]={4142.811,169.6871,3358.5151};
 			name="Spawn_85";
 			type="Empty";
 		};
@@ -2062,21 +2062,21 @@ class Mission
 		};
 		class Item147
 		{
-			position[]={3463.0647,143.46271,2645.6714};
+			position[]={4147.6982,157.70564,3307.1978};
 			name="Store_Gun_1";
 			type="Empty";
 			colorName="ColorBrown";
 		};
 		class Item148
 		{
-			position[]={5523.4912,77.977371,4716.7896};
+			position[]={5522.9795,77.35244,4698.1113};
 			name="Store_Gun_2";
 			type="Empty";
 			colorName="ColorBrown";
 		};
 		class Item149
 		{
-			position[]={2451.6255,74.042847,5679.042};
+			position[]={2461.9604,74.104752,5692.8784};
 			name="Store_Gun_3";
 			type="Empty";
 			colorName="ColorBrown";

@@ -132,6 +132,12 @@ R3F_LOG_CFG_transporteurs = [
  */
  
 R3F_LOG_CFG_objets_transportables =  [
+	["Box_East_Support_F", 5],
+	["Box_East_Wps_F", 5],
+	["Box_East_WpsSpecial_F", 5],
+	["Box_NATO_Support_F", 5],
+	["Box_NATO_Wps_F", 5],
+	["Box_NATO_WpsSpecial_F", 5],
 	["Land_Barrelwater_F", 5],
 	["Land_Fireplace_F", 5],
 	["Land_WoodenBox_F", 5],

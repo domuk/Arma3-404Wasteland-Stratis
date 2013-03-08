@@ -236,6 +236,48 @@ switch(_switch) do
                         {
                             player addItem _class;
                         };
+                        case "vest":
+                        {
+                            _vestName = vest player;
+                            if(_vestName == "") then
+                            {
+                                player addVest _class;
+                            }
+                            else
+                            {
+                               {if(_x select 1 == _class) then{_price = _x select 2; _name = _x select 0;};}forEach accessoriesArray;
+								gunStoreCart = gunStoreCart - _price;
+								hint format["You already have a vest please drop it before buying a new one"]; 
+                            };
+                        };
+                        case "uni":
+                        {
+                            _vestName = uniform player;
+                            if(_vestName == "") then
+                            {
+                                player addUniform _class;
+                            }
+                            else
+                            {
+                               {if(_x select 1 == _class) then{_price = _x select 2; _name = _x select 0;};}forEach accessoriesArray;
+								gunStoreCart = gunStoreCart - _price;
+								hint format["You already have a uniform on please drop it before buying a new one"]; 
+                            };
+                        };
+                        case "hat":
+                        {
+                            _vestName = headgear player;
+                            if(_vestName == "") then
+                            {
+                                player addHeadgear _class;
+                            }
+                            else
+                            {
+                               {if(_x select 1 == _class) then{_price = _x select 2; _name = _x select 0;};}forEach accessoriesArray;
+								gunStoreCart = gunStoreCart - _price;
+								hint format["You something in the headgear slot please drop it before buying a new one"]; 
+                            };
+                        };
                         case default
                         {
                             
@@ -248,37 +290,6 @@ switch(_switch) do
 		player setVariable["cmoney",_playerMoney - gunStoreCart,true];
 		_playerMoneyText CtrlsetText format["Cash: $%1", player getVariable "cmoney"];
 
-		gunStoreCart = 0;
-		_totalText CtrlsetText format["Total: $%1", gunStoreCart];
-		lbClear _cartlist;
-	};
-	
-	//Buy To Crate
-	case 1:
-	{
-		for [{_x=0},{_x<=_size},{_x=_x+1}] do
-		{
-			_itemText = _cartlist lbText _x;
-
-			{if(_itemText == _x select 0) then{
-				_class = _x select 1;
-				gsCrate addWeaponCargoGlobal [_class, 1];
-			}}forEach weaponsArray;
-
-			{if(_itemText == _x select 0) then{
-				_class = _x select 1;
-				gsCrate addMagazineCargoGlobal [_class, 1];
-			}}forEach ammoArray;
-
-			{if(_itemText == _x select 0) then{
-				_class = _x select 1;
-				gsCrate addWeaponCargoGlobal [_class, 1];
-			}}forEach accessoriesArray;
-		};
-		
-		player setVariable["cmoney",_playerMoney - gunStoreCart,true];
-		_playerMoneyText CtrlsetText format["Cash: $%1", player getVariable "cmoney"];
-		
 		gunStoreCart = 0;
 		_totalText CtrlsetText format["Total: $%1", gunStoreCart];
 		lbClear _cartlist;

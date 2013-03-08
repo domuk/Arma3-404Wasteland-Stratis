@@ -14,10 +14,3 @@ _Dialog = findDisplay gunshop_DIALOG;
 _playerMoney = _Dialog displayCtrl gunshop_money;
 _money = player getVariable "cmoney";
 _playerMoney CtrlsetText format["Cash: $%1", _money];
-
-gsLocation = str(_this select 0);
-
-if(gsLocation == "gs1") then {gsCrate = g_ammo_1;};
-if(gsLocation == "gs2") then {gsCrate = g_ammo_2;};
-if(gsLocation == "gs3") then {gsCrate = g_ammo_3;};
-if(gsLocation == "gs4") then {gsCrate = g_ammo_4;};

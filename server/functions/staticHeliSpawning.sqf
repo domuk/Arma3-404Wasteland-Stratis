@@ -15,25 +15,34 @@ _i = 0;
 while {_counter < 8} do // 8 helis spawn at the beginning
 {
 	_selectedMarker = floor (random 24);
-    _position = getMarkerPos format ["heliSpawn_%1", _selectedMarker];
-    _newPos = [_position, 25, 50, 1, 0, 60 * (pi / 180), 0] call BIS_fnc_findSafePos;
-	[0, _newPos] call staticHeliCreation;
-    
-	currentStaticHelis set [count currentStaticHelis, _selectedMarker];
-         
-    /*               
-    _markerName = format["marker%1",_counter];
-	_marker = createMarker [_markerName, _newPos];
-	_marker setMarkerType "dot";
-	_marker setMarkerSize [1.25, 1.25];
-	_marker setMarkerColor "ColorRed";
-    */
-    _counter = _counter + 1;
-    _countActual = _countActual + 1;
+    if(_selectedMarker in currentStaticHelis) then
+    {
+        //Failed to find a marker.
+    }
+    else
+    {
+        _position = getMarkerPos format ["heliSpawn_%1", _selectedMarker];
+	    _newPos = [_position, 25, 50, 1, 0, 60 * (pi / 180), 0] call BIS_fnc_findSafePos;
+		[0, _newPos] call staticHeliCreation;
+	    
+		currentStaticHelis set [count currentStaticHelis, _selectedMarker];
+	    
+        _counter = _counter + 1;
+	    _countActual = _countActual + 1;
+        /*              
+	    _markerName = format["marker%1",_counter];
+		_marker = createMarkerLocal [_markerName, _newPos];
+		_markerName createMarkerLocal "mil_dot";
+		_markerName createMarkerLocal [1.25, 1.25];
+		_markerName createMarkerLocal "ColorRed";
+        */
+    };
 };
 
-//{diag_log format["Heli %1 = %2",_forEachIndex, _x];} forEach currentStaticHelis;
+diag_log format["WASTELAND SERVER - %1 Static helis Spawned",_countActual];
 
+/*
+{diag_log format["Heli %1 = %2",_forEachIndex, _x];} forEach currentStaticHelis;
 for "_i" from 1 to 24 do {
     _doSpawnWreck = true;
     
@@ -48,14 +57,11 @@ for "_i" from 1 to 24 do {
     	_newPos = [_position, 25, 50, 1, 0, 60 * (pi / 180), 0] call BIS_fnc_findSafePos;
 		[1, _newPos] call staticHeliCreation;
         
-        /*
     	_markerName = format["marker%1",_i];
 		_marker = createMarker [_markerName, _newPos];
 		_marker setMarkerType "dot";
 		_marker setMarkerSize [1.25, 1.25];
 		_marker setMarkerColor "ColorBlue";
-        */
     };
 };
-
-diag_log format["WASTELAND SERVER - %1 Static helis Spawned",_countActual];
+*/

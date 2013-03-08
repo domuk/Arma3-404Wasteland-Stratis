@@ -26,6 +26,7 @@ if (_isWreck == 0) then {
 	_currHeli setVariable["newVehicle",1,true];
 } else {
 	//diag_log "Spawning heli wreck...";
+    /*
 	_spawnType = staticHeliList select (random (count staticHeliList - 1));
 	_currHeli = createVehicle [_spawnType,_spawnPos,[], 50,"None"]; 
 	
@@ -38,4 +39,5 @@ if (_isWreck == 0) then {
 	_currHeli setVariable["newVehicle",1,true];
     
     _currHeli setDamage 1; // Destroy this heli on the spot so it looks like a realistic crash.
+   	*/
 };

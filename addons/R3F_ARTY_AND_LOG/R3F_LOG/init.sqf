@@ -22,7 +22,7 @@
 if (isServer) then
 {
 	// On crée le point d'attache qui servira aux attachTo pour les objets à charger virtuellement dans les véhicules
-	R3F_LOG_PUBVAR_point_attache = "HeliHEmpty" createVehicle [0, 0, 0];
+	R3F_LOG_PUBVAR_point_attache = "Land_HelipadEmpty_F" createVehicle [0, 0, 0];
 	publicVariable "R3F_LOG_PUBVAR_point_attache";
 };
 
