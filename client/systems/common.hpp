@@ -439,6 +439,7 @@ class w_RscCombo {
 	rowHeight = 0.025000;
 	wholeHeight = "4 * 0.2";
 	color[] = {1, 1, 1, 1};
+	colorDisabled[] = {0,0,0,0.3};
 	colorText[] = {0, 0, 0, 1};
 	colorBackground[] = {1, 1, 1, 1};
 	colorSelect[] = {1, 0, 0, 1};
