@@ -1,3 +1,5 @@
+waitUntil {!isNull player && isPlayer player};
+
 player createDiarySubject ["404games", "404Games Information"];
 player createDiarySubject ["changelog", "404Games Change Log"];
 player createDiarySubject ["wasteland", "What is Wasteland?"];
@@ -32,7 +34,24 @@ player createDiaryRecord["changelog",
 "
 <br/>
 		[Added] - Light Armed Vehicle Mission (All armed cars).<br/>
-        [Removed] - All armed cars from initial spawn for balance.<br/>
+		[Removed] - All armed cars from initial spawn for balance.<br/>
+"
+]
+];
+
+player createDiaryRecord["changelog",
+[
+"1.05",
+"
+<br/>
+		[Added] Uniforms,Hats and Vests to the gunstore.<br/>
+		[Added] Players now spawn with a backpack.<br/>
+		[Fixed] Not able to get weapons out of vehicle.<br/>
+		[Fixed] R3F Loading into vehicles.<br/>
+		[Fixed] Gunstore locations so they can't be ran down by vehicles.<br/>
+		[Fixed] Health Icon.<br/>
+		[Fixed] Static helicopter spawning and no more explosions.<br/>
+		[Fixed] Weapon crates can now be loaded into vehicles.<br/>
 "
 ]
 ];

@@ -18,6 +18,10 @@ removeAllWeapons _player;
 removeBackpack _player;
 
 //Default case means something fucked up.
+_player unassignItem "NVGoggles"; 
+_player removeItem "NVGoggles";
+removeAllWeapons _player;
+_player addBackpack "B_AssaultPack_Base";
 _player addMagazine "16Rnd_9x21_Mag";
 _player addMagazine "16Rnd_9x21_Mag";
 _player addWeapon "hgun_P07_F";
@@ -25,13 +29,14 @@ _player selectWeapon "hgun_P07_F";
 
 if(str(playerSide) in ["WEST"]) then
 {
-    _player unassignItem "NVGoggles"; 
+   	_player unassignItem "NVGoggles"; 
 	_player removeItem "NVGoggles";
 	removeAllWeapons _player;
-    _player addMagazine "16Rnd_9x21_Mag";
-    _player addMagazine "16Rnd_9x21_Mag";
+    _player addBackpack "B_AssaultPack_Base";
+	_player addMagazine "16Rnd_9x21_Mag";
+	_player addMagazine "16Rnd_9x21_Mag";
 	_player addWeapon "hgun_P07_F";
-	_player selectWeapon "hgun_P07_F";
+	_player selectWeapon "hgun_P07_F"; 
 };
 
 if(str(playerSide) in ["EAST"]) then
@@ -39,6 +44,7 @@ if(str(playerSide) in ["EAST"]) then
     _player unassignItem "NVGoggles"; 
 	_player removeItem "NVGoggles";
 	removeAllWeapons _player;
+    _player addBackpack "B_AssaultPack_Base";
     _player addMagazine "16Rnd_9x21_Mag";
     _player addMagazine "16Rnd_9x21_Mag";
 	_player addWeapon "hgun_P07_F";
@@ -53,6 +59,7 @@ if(str(playerSide) in ["GUER"]) then
 	removeUniform _player;
 	_uniform = ["U_C_Poloshirt_tricolour","U_C_Poloshirt_salmon","U_C_Commoner1_3","U_C_Commoner1_2"] call BIS_fnc_selectRandom;
 	_player addUniform _uniform;
+    _player addBackpack "B_AssaultPack_Base";
     _player addMagazine "16Rnd_9x21_Mag";
     _player addMagazine "16Rnd_9x21_Mag";
 	_player addWeapon "hgun_P07_F";

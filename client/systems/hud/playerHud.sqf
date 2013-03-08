@@ -21,7 +21,7 @@ while {true} do
     _health = round (_health * (10 ^ _decimalPlaces)) / (10 ^ _decimalPlaces);
     _health = 100 - (_health * 100);
     
-    _vitals ctrlSetStructuredText parseText format ["%1 <img size='0.8' image='client\icons\health.paa'/><br/>%2 <img size='0.8' image='client\icons\food.paa'/><br/>%3 <img size='0.8' image='client\icons\water.paa'/><br/>%4 <img size='0.8' image='client\icons\money.paa'/>", _health, hungerLevel, thirstLevel, (player getVariable "cmoney")];
+    _vitals ctrlSetStructuredText parseText format ["%1 <img size='0.8' image='client\icons\1.paa'/><br/>%3 <img size='0.8' image='client\icons\water.paa'/><br/>%2 <img size='0.8' image='client\icons\food.paa'/><br/>%4 <img size='0.8' image='client\icons\money.paa'/>", _health, hungerLevel, thirstLevel, (player getVariable "cmoney")];
     _vitals ctrlCommit 0;
         
     if(player != vehicle player) then
