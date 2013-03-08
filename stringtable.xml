@@ -41,10 +41,10 @@
 			<English>&lt;t color='#FF9E9E' size='2.5' &gt;Welcome to 404Wasteland&lt;t color='#FFFFFF' size='1' &gt;</English>
 		</Key>
 		<Key ID="STR_WL_YouAreInTeam">
-			<English>&lt;t color='#FF9E9E' size='2.5' &gt;Instructions&lt;br/&gt;&lt;t color='#FFFFFF' size='1.5' &gt;# You are in &lt;img size="1.5" image="%1"/&gt; &lt;t color="%2"&gt;%3&lt;/t&gt; team.&lt;br/&gt;# Attacking or stealing from other %4 players is &lt;t color="#aa0000"&gt;FORBIDDEN.&lt;/t&gt;&lt;br/&gt;# No VOIP/VON in GLOBAL&lt;br/&gt;# The server does restart unexpectedly.&lt;br/&gt;# You will be locked to your team after 3 minutes.&lt;/t&gt;</English>
+			<English>&lt;t color='#FF9E9E' size='2.5' &gt;Instructions&lt;br/&gt;&lt;t color='#FFFFFF' size='1.5' &gt;* You are in &lt;img size="1.5" image="%1"/&gt; &lt;t color="%2"&gt;%3&lt;/t&gt; team.&lt;br/&gt;* Attacking or stealing from other %4 players is &lt;t color="#aa0000"&gt;FORBIDDEN.&lt;/t&gt;&lt;br/&gt;* No VOIP/VON in GLOBAL&lt;br/&gt;* The server does restart unexpectedly.&lt;br/&gt;* You will be locked to your team after 3 minutes.&lt;/t&gt;</English>
 		</Key>
 		<Key ID="STR_WL_YouAreInFFA">
-			<English>&lt;t color='#FF9E9E' size='2.5' &gt;Instructions&lt;br/&gt;&lt;t color='#FFFFFF' size='1.5' &gt;# You are in &lt;img size="1.5" image="%1"/&gt; &lt;t color="%2"&gt;%3&lt;/t&gt; team.&lt;br/&gt;# You are &lt;t color="#00aa00"&gt;FREE TO ATTACK ANYONE.&lt;/t&gt;&lt;br/&gt;# No VOIP/VON in GLOBAL&lt;br/&gt;# The server does restart unexpectedly.&lt;/t&gt;</English>
+			<English>&lt;t color='#FF9E9E' size='2.5' &gt;Instructions&lt;br/&gt;&lt;t color='#FFFFFF' size='1.5' &gt;* You are in &lt;img size="1.5" image="%1"/&gt; &lt;t color="%2"&gt;%3&lt;/t&gt; team.&lt;br/&gt;* You are &lt;t color="#00aa00"&gt;FREE TO ATTACK ANYONE.&lt;/t&gt;&lt;br/&gt;* No VOIP/VON in GLOBAL&lt;br/&gt;* The server does restart unexpectedly.&lt;/t&gt;</English>
 		</Key>
 		<Key ID="STR_WL_MapMoreInfo">
 			<English>&lt;t color='#FFFFFF' size='1.5' &gt;Welcome to 404Wasteland ArmA 3 Alpha. &lt;br/&gt;Please report all bugs/problems to http://www.404games.co.uk/bugs&lt;br/&gt;Server restart times: 6AM/6PM (GMT)&lt;br/&gt;For more info please see the map&lt;br/&gt;&lt;br/&gt;&lt;/t&gt;</English>
