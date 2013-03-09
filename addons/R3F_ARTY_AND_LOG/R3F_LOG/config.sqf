@@ -163,12 +163,12 @@ R3F_LOG_CFG_objets_transportables =  [
  */
 
 R3F_LOG_CFG_objets_deplacables = [
-	["Box_East_Support_F", 5],
-	["Box_East_Wps_F", 5],
-	["Box_East_WpsSpecial_F", 5],
-	["Box_NATO_Support_F", 5],
-	["Box_NATO_Wps_F", 5],
-	["Box_NATO_WpsSpecial_F", 5],
+	"Box_East_Support_F"
+	"Box_East_Wps_F",
+	"Box_East_WpsSpecial_F",
+	"Box_NATO_Support_F",
+	"Box_NATO_Wps_F",
+	"Box_NATO_WpsSpecial_F",
 	"Land_Barrelwater_F",
 	"Land_Fireplace_F",
 	"Land_WoodenBox_F",
