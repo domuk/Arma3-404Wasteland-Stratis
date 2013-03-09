@@ -78,7 +78,7 @@ switch(_selectedBox) do {
 		_currBox addWeaponCargoGlobal ["hgun_P07_F",2];
 		_currBox addWeaponCargoGlobal ["hgun_Rook40_F",2];
 
-		_currBox addWeaponCargoGlobal ["NVGoggles",5];
+		_currBox addItemCargoGlobal ["NVGoggles",5];
 		_currBox addWeaponCargoGlobal ["Binocular",5];
 
 		_currBox addMagazineCargoGlobal ["16Rnd_9x21_Mag",10];
