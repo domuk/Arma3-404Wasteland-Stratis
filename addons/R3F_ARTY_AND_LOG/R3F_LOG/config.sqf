@@ -1,12 +1,12 @@
 /**
  * English and French comments
- * Commentaires anglais et français
+ * Commentaires anglais et franï¿½ais
  * 
  * This file contains the configuration variables of the logistics system.
- * Fichier contenant les variables de configuration du système de logistique.
+ * Fichier contenant les variables de configuration du systï¿½me de logistique.
  * 
  * Important note : All the classes names which inherits from the ones used in configuration variables will be also available.
- * Note importante : Tous les noms de classes dérivant de celles utilisées dans les variables de configuration seront aussi valables.
+ * Note importante : Tous les noms de classes dï¿½rivant de celles utilisï¿½es dans les variables de configuration seront aussi valables.
  */
 
 /*
@@ -14,16 +14,16 @@
  * folowing appropriate lists. The second is to create a new external file in the /addons_config/ directory,
  * according to the same scheme as the existing ones, and to add a #include at the end of this current file.
  * 
- * Deux moyens existent pour gérer de nouveaux objets avec le système logistique. Le premier consiste à ajouter
- * ces objets dans les listes appropriées ci-dessous. Le deuxième est de créer un fichier externe dans le répertoire
- * /addons_config/ selon le même schéma que ceux qui existent déjà, et d'ajouter un #include à la fin de ce présent fichier.
+ * Deux moyens existent pour gï¿½rer de nouveaux objets avec le systï¿½me logistique. Le premier consiste ï¿½ ajouter
+ * ces objets dans les listes appropriï¿½es ci-dessous. Le deuxiï¿½me est de crï¿½er un fichier externe dans le rï¿½pertoire
+ * /addons_config/ selon le mï¿½me schï¿½ma que ceux qui existent dï¿½jï¿½, et d'ajouter un #include ï¿½ la fin de ce prï¿½sent fichier.
  */
 
 /****** TOW WITH VEHICLE / REMORQUER AVEC VEHICULE ******/
 
 /**
  * List of class names of (ground or air) vehicles which can tow towables objects.
- * Liste des noms de classes des véhicules terrestres pouvant remorquer des objets remorquables.
+ * Liste des noms de classes des vï¿½hicules terrestres pouvant remorquer des objets remorquables.
  */
 R3F_LOG_CFG_remorqueurs = [
 	"c_offroad",
@@ -53,7 +53,7 @@ R3F_LOG_CFG_objets_remorquables = [
 
 /**
  * List of class names of air vehicles which can lift liftables objects.
- * Liste des noms de classes des véhicules aériens pouvant héliporter des objets héliportables.
+ * Liste des noms de classes des vï¿½hicules aï¿½riens pouvant hï¿½liporter des objets hï¿½liportables.
  */
 R3F_LOG_CFG_heliporteurs = [
 	"O_Ka60_Unarmed_F",
@@ -64,7 +64,7 @@ R3F_LOG_CFG_heliporteurs = [
 
 /**
  * List of class names of liftables objects.
- * Liste des noms de classes des objets héliportables.
+ * Liste des noms de classes des objets hï¿½liportables.
  */
 R3F_LOG_CFG_objets_heliportables = [
 
@@ -85,7 +85,7 @@ R3F_LOG_CFG_objets_heliportables = [
  * The arbitrary referencial used is : an ammo box of type USVehicleBox "weights" 12 units.
  * 
  * Cette section utilise une quantification du volume et/ou poids des objets.
- * Le référentiel arbitraire utilisé est : une caisse de munition de type USVehicleBox "pèse" 12 unités.
+ * Le rï¿½fï¿½rentiel arbitraire utilisï¿½ est : une caisse de munition de type USVehicleBox "pï¿½se" 12 unitï¿½s.
  * 
  * Note : the priority of a declaration of capacity to another corresponds to their order in the tables.
  *   For example : the "Truck" class is in the "Car" class (see http://community.bistudio.com/wiki/ArmA_2:_CfgVehicles).
@@ -93,19 +93,19 @@ R3F_LOG_CFG_objets_heliportables = [
  *   Then all the sub-classes in "Truck" will have a capacity of 140. And all the sub-classes of "Car", excepted the ones
  *   in "Truck", will have a capacity of 40.
  * 
- * Note : la priorité d'une déclaration de capacité sur une autre correspond à leur ordre dans les tableaux.
- *   Par exemple : la classe "Truck" appartient à la classe "Car" (voir http://community.bistudio.com/wiki/ArmA_2:_CfgVehicles).
- *   Si "Truck" est déclaré avec une capacité de 140 avant "Car". Et que "Car" est déclaré après "Truck" avec une capacité de 40,
- *   Alors toutes les sous-classes appartenant à "Truck" auront une capacité de 140. Et toutes les sous-classes appartenant
- *   à "Car", exceptées celles de "Truck", auront une capacité de 40.
+ * Note : la prioritï¿½ d'une dï¿½claration de capacitï¿½ sur une autre correspond ï¿½ leur ordre dans les tableaux.
+ *   Par exemple : la classe "Truck" appartient ï¿½ la classe "Car" (voir http://community.bistudio.com/wiki/ArmA_2:_CfgVehicles).
+ *   Si "Truck" est dï¿½clarï¿½ avec une capacitï¿½ de 140 avant "Car". Et que "Car" est dï¿½clarï¿½ aprï¿½s "Truck" avec une capacitï¿½ de 40,
+ *   Alors toutes les sous-classes appartenant ï¿½ "Truck" auront une capacitï¿½ de 140. Et toutes les sous-classes appartenant
+ *   ï¿½ "Car", exceptï¿½es celles de "Truck", auront une capacitï¿½ de 40.
  */
 
 /**
  * List of class names of (ground or air) vehicles which can transport transportables objects.
  * The second element of the arrays is the load capacity (in relation with the capacity cost of the objects).
  * 
- * Liste des noms de classes des véhicules (terrestres ou aériens) pouvant transporter des objets transportables.
- * Le deuxième élément des tableaux est la capacité de chargement (en relation avec le coût de capacité des objets).
+ * Liste des noms de classes des vï¿½hicules (terrestres ou aï¿½riens) pouvant transporter des objets transportables.
+ * Le deuxiï¿½me ï¿½lï¿½ment des tableaux est la capacitï¿½ de chargement (en relation avec le coï¿½t de capacitï¿½ des objets).
  */
 R3F_LOG_CFG_transporteurs = [
 	["c_offroad", 30],
@@ -128,7 +128,7 @@ R3F_LOG_CFG_transporteurs = [
  * The second element of the arrays is the cost capacity (in relation with the capacity of the vehicles).
  * 
  * Liste des noms de classes des objets transportables.
- * Le deuxième élément des tableaux est le coût de capacité (en relation avec la capacité des véhicules).
+ * Le deuxiï¿½me ï¿½lï¿½ment des tableaux est le coï¿½t de capacitï¿½ (en relation avec la capacitï¿½ des vï¿½hicules).
  */
  
 R3F_LOG_CFG_objets_transportables =  [
@@ -163,6 +163,12 @@ R3F_LOG_CFG_objets_transportables =  [
  */
 
 R3F_LOG_CFG_objets_deplacables = [
+	"Box_East_Support_F"
+	"Box_East_Wps_F",
+	"Box_East_WpsSpecial_F",
+	"Box_NATO_Support_F",
+	"Box_NATO_Wps_F",
+	"Box_NATO_WpsSpecial_F",
 	"Land_Barrelwater_F",
 	"Land_Fireplace_F",
 	"Land_WoodenBox_F",
@@ -184,7 +190,7 @@ R3F_LOG_CFG_objets_deplacables = [
  * List of files adding objects in the arrays of logistics configuration (e.g. R3F_LOG_CFG_remorqueurs)
  * Add an include to the new file here if you want to use the logistics with a new addon.
  * 
- * Liste des fichiers ajoutant des objets dans les tableaux de fonctionnalités logistiques (ex : R3F_LOG_CFG_remorqueurs)
+ * Liste des fichiers ajoutant des objets dans les tableaux de fonctionnalitï¿½s logistiques (ex : R3F_LOG_CFG_remorqueurs)
  * Ajoutez une inclusion vers votre nouveau fichier ici si vous souhaitez utilisez la logistique avec un nouvel addon.
  */
 //#include "addons_config\arma2_CO_objects.sqf"
