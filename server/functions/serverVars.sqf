@@ -72,9 +72,9 @@ objectList = ["Land_Barrelwater_F",
 			"Land_HBarrierBig_F",
 			"Land_HBarrierBig_F",
 			"Land_HBarrier_3_F",
-			"Land_CncBarrier_F",
-			"Land_Mound01_8m_F",
-			"Land_Mound02_8m_F",
+//			"Land_CncBarrier_F", // broken map items
+//			"Land_Mound01_8m_F",
+//			"Land_Mound02_8m_F",
 			"Land_Scaffolding_F",
 //			"Land_Razorwire_F", //isnt currently able to be picked up
 			"Land_HBarrierBig_F",

@@ -56,6 +56,19 @@ player createDiaryRecord["changelog",
 ]
 ];
 
+player createDiaryRecord["changelog",
+[
+"1.06",
+"
+<br/>
+		[Fixed] Fix to make Ammo boxes moveable.(thanks to meat147).<br/>
+		[Fixed] missing disabled color for money input error.(thanks to Sanjo).<br/>
+		[Fixed] NV Goggles in cars and boxes.(thanks to Sanjo).<br/>
+		
+"
+]
+];
+
 player createDiaryRecord["404games",
 [
 "Credits",

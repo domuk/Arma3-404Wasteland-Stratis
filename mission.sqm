@@ -19,7 +19,7 @@ class Mission
 	randomSeed=14957468;
 	class Intel
 	{
-		briefingName="404 Wasteland v1.05 Alpha";
+		briefingName="404 Wasteland v1.06 Alpha";
 		briefingDescription="A harsh survival sandbox";
 		resistanceWest=0;
 		startWeather=0.10000001;
