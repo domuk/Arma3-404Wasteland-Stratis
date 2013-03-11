@@ -42,6 +42,7 @@ _picture = getText (configFile >> "cfgVehicles" >> typeOf _vehicle >> "picture")
 _vehicleName = getText (configFile >> "cfgVehicles" >> typeOf _vehicle >> "displayName");
 _hint = parseText format ["<t align='center' color='%4' shadow='2' size='1.75'>Side Objective</t><br/><t align='center' color='%4'>------------------------------</t><br/><t align='center' color='%5' size='1.25'>%1</t><br/><t align='center'><img size='5' image='%2'/></t><br/><t align='center' color='%5'>A<t color='%4'> %3</t>, has been spotted at the marker go get it for your team.</t>", _missionType, _picture, _vehicleName, sideMissionColor, subTextColor];
 messageSystem = _hint;
+if (!isDedicated) then { call serverMessage };
 publicVariable "messageSystem";
 
 CivGrpS = createGroup civilian;

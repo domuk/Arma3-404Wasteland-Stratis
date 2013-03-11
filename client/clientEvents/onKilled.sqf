@@ -56,8 +56,12 @@ if((_player != _killer) && (vehicle _player != vehicle _killer) && (playerSide =
 };
 
 if(!isNull(pvar_PlayerTeamKiller)) then {
-	publicVar_teamkillMessage = pvar_PlayerTeamKiller;
-	publicVariable "publicVar_teamkillMessage";
+    if (local pvar_PlayerTeamKiller) then {
+        [] spawn teamkillMessage;
+    } else {
+        publicVar_teamkillMessage = pvar_PlayerTeamKiller;
+        publicVariable "publicVar_teamkillMessage";
+    };
 };
 
 private["_a","_b","_c","_d","_e","_f","_m","_player","_killer", "_to_delete"];
