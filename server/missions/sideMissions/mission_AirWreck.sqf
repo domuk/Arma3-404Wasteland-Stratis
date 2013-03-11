@@ -14,11 +14,7 @@ private ["_result","_missionMarkerName","_missionType","_startTime","_returnData
 _result = 0;
 _missionMarkerName = "AirWreck_Marker";
 _missionType = "Aircraft Wreck";
-#ifdef __A2NET__
-_startTime = floor(netTime);
-#else
 _startTime = floor(time);
-#endif
 
 diag_log format["WASTELAND SERVER - Side Mission Started: %1",_missionType];
 
@@ -62,11 +58,7 @@ CivGrpS = createGroup civilian;
 [CivGrpS,_randomPos] spawn createSmallGroup;
 
 diag_log format["WASTELAND SERVER - Side Mission Waiting to be Finished: %1",_missionType];
-#ifdef __A2NET__
-_startTime = floor(netTime);
-#else
 _startTime = floor(time);
-#endif
 waitUntil
 {
     sleep 1; 

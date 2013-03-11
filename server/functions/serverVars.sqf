@@ -21,10 +21,6 @@ CVG_weapons = CVG_weapons + CVG_Heavy;
 CVG_weapons = CVG_weapons + CVG_pistols;
 CVG_weapons = CVG_weapons + CVG_Launchers;
 
-#ifdef __A2NET__
-missionStartTime = 0;
-netTime = 0;
-#endif
 
 sideMissionPos = "";
 mainMissionPos = "";
