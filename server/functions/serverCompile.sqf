@@ -53,8 +53,3 @@ fn_refillbox = compile preprocessFileLineNumbers "server\functions\fn_refillbox.
 
 //Player Management
 server_playerDied = compile preprocessFileLineNumbers "server\functions\serverPlayerDied.sqf";
-
-//.Net Compiles
-#ifdef __A2NET__
-arma2NetTime = compile preprocessFileLineNumbers "server\functions\netTime.sqf";
-#endif

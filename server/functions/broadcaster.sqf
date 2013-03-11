@@ -7,11 +7,6 @@
 if(!X_Server) exitWith {};
 
 #include "setup.sqf"
-#ifdef __A2NET__
-call arma2NetTime;
-waituntil{netTime > 0};
-missionStartTime = netTime;
-#endif
 
 while {true} do {
 	#ifdef __A2NET__

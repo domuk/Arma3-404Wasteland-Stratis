@@ -87,11 +87,7 @@ _position = getPosASL _unit;
 _type = typeOf _unit;
 _dead = false;
 _nodelay = false;
-#ifdef __A2NET__
-_startTime = floor(netTime);
-#else
 _startTime = floor(time);
-#endif
 
 // Start monitoring the vehicle
 while {_run} do 
