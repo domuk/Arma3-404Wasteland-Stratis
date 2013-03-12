@@ -14,11 +14,7 @@ private ["_result","_missionMarkerName","_missionType","_startTime","_returnData
 _result = 0;
 _missionMarkerName = "WeaponCache_Marker";
 _missionType = "Weapon Cache";
-#ifdef __A2NET__
-_startTime = floor(netTime);
-#else
 _startTime = floor(time);
-#endif
 
 diag_log format["WASTELAND SERVER - Side Mission Started: %1",_missionType];
 
@@ -50,17 +46,14 @@ _box2 = createVehicle ["Box_East_Support_F",[(_randomPos select 0), (_randomPos 
 
 _hint = parseText format ["<t align='center' color='%2' shadow='2' size='1.75'>Side Objective</t><br/><t align='center' color='%2'>------------------------------</t><br/><t align='center' color='%3' size='1.25'>%1</t><br/><t align='center' color='%3'>A supply drop has been spotted near the marker</t>", _missionType,  sideMissionColor, subTextColor];
 messageSystem = _hint;
+if (!isDedicated) then { call serverMessage };
 publicVariable "messageSystem";
 
 CivGrpS = createGroup civilian;
 [CivGrpS,_randomPos] spawn createSmallGroup;
 
 diag_log format["WASTELAND SERVER - Side Mission Waiting to be Finished: %1",_missionType];
-#ifdef __A2NET__
-_startTime = floor(netTime);
-#else
 _startTime = floor(time);
-#endif
 waitUntil
 {
     sleep 1; 
@@ -85,6 +78,7 @@ if(_result == 1) then
     deleteGroup CivGrpS;
     _hint = parseText format ["<t align='center' color='%2' shadow='2' size='1.75'>Objective Failed</t><br/><t align='center' color='%2'>------------------------------</t><br/><t align='center' color='%2' size='1.25'>%1</t><br/><t align='center' color='%3'>Objective failed, better luck next time</t>", _missionType, failMissionColor, subTextColor];
 	messageSystem = _hint;
+	if (!isDedicated) then { call serverMessage };
     publicVariable "messageSystem";
     diag_log format["WASTELAND SERVER - Side Mission Failed: %1",_missionType];
 } else {
@@ -92,6 +86,7 @@ if(_result == 1) then
     deleteGroup CivGrpS;
     _hint = parseText format ["<t align='center' color='%2' shadow='2' size='1.75'>Objective Complete</t><br/><t align='center' color='%2'>------------------------------</t><br/><t align='center' color='%3' size='1.25'>%1</t><br/><t align='center' color='%3'>The ammo caches have been collected well done team</t>", _missionType, successMissionColor, subTextColor];
 	messageSystem = _hint;
+	if (!isDedicated) then { call serverMessage };
     publicVariable "messageSystem";
     diag_log format["WASTELAND SERVER - Side Mission Success: %1",_missionType];
 };

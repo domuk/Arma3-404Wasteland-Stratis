@@ -54,6 +54,7 @@ while {_runLoop} do {
               
             // put updated marker in with updated state
 			clientRadarMarkers set [count clientRadarMarkers,[_uniqueID,_radarStationPos,_playerSide, _markerState]];
+			if (!isDedicated) then { call updateRadarMarkers };
 			publicVariable "clientRadarMarkers"; 
         };
     }forEach clientRadarMarkers;
