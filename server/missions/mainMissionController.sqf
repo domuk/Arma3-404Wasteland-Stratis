@@ -24,7 +24,7 @@ diag_log format["WASTELAND SERVER - Started Main Mission State"];
 _MainMissions = [
 	[mission_ArmedHeli,"mission_ArmedHeli"],
 	[mission_LightArmVeh,"mission_LightArmVeh"],
-	[mission_CivHeli,"mission_CivHeli"]
+	[mission_CivHeli,"mission_CivHeli"],
 	[mission_Convoy,"mission_Convoy"]
 ];
 _lastMission = "nomission";

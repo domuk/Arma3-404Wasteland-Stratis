@@ -26,7 +26,6 @@ _vehicles set [2, "B_Hunter_RCWS_F" createVehicle [3240.3447, 6829.6089, 4.27597
     _group addVehicle _x;
     clearMagazineCargoGlobal _x;
     clearWeaponCargoGlobal _x;
-    _x setVariable ["R3F_LOG_disabled", true, true];
 } forEach _vehicles;
 
 // Soldiers for all vehicles
@@ -55,6 +54,10 @@ _vehicles set [2, "B_Hunter_RCWS_F" createVehicle [3240.3447, 6829.6089, 4.27597
     
 } forEach _vehicles;
 
+_group setCombatMode "GREEN";
+_group setBehaviour "SAFE";
+_group setSpeedMode "NORMAL";
+
 // Add waypoints
 _waypoints = [
     [4376.2495,6777.9741,129.06226],
@@ -81,8 +84,9 @@ _waypoints = [
     _waypoint setWaypointType "MOVE";
     _waypoint setWaypointCompletionRadius 50;
     _waypoint setWaypointCombatMode "GREEN"; // Defensiv behaviour
-    _waypoint setWaypointFormation "STAG COLUMN";
+    _waypoint setWaypointFormation "COLUMN";
     _waypoint setWaypointBehaviour "SAFE"; // Force convoy to normaly drive on the street.
+    _waypoint setWaypointSpeed "NORMAL";
 } forEach _waypoints;
 
 // Create marker
@@ -120,15 +124,9 @@ waitUntil
     _unitsAlive == 0 || _failed
 };
 
-{
-    _x setVariable ["R3F_LOG_disabled", false, true];
-} forEach _vehicles;
-
 if(_failed) then
 {
     // Mission failed
-    { if ({isPlayer _x} count units _x == 0) then { deleteVehicle _x } } forEach _vehicles;
-    deleteGroup _group;
     _hint = parseText format ["<t align='center' color='%4' shadow='2' size='1.75'>Objective Failed</t><br/><t align='center' color='%4'>------------------------------</t><br/><t align='center' color='%5' size='1.25'>%1</t><br/><t align='center'><img size='5' image='%2'/></t><br/><t align='center' color='%5'>Objective failed, better luck next time</t>", _missionType, _picture, _vehicleName, failMissionColor, subTextColor];
     messageSystem = _hint;
     if (!isDedicated) then { call serverMessage };
@@ -136,8 +134,7 @@ if(_failed) then
     diag_log format["WASTELAND SERVER - Main Mission Failed: %1",_missionType];
 } else {
     // Mission complete
-    deleteGroup _group;
-    
+
     // Spawn loot at last marker position
     _ammobox = "Box_NATO_Wps_F" createVehicle getMarkerPos _marker;
     clearMagazineCargoGlobal _ammobox;
