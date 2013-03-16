@@ -1,6 +1,6 @@
 // TODO: Fix that convoy get sometimes stuck ob objects on the road.
 
-private ["_missionMarkerName","_missionType","_picture","_vehicleName","_hint","_waypoint","_waypoints","_group","_vehicles","_marker","_failed","_startTime","_vehicle","_vehiclePosition","_soldier","_numWaypoints","_ammobox"];
+private ["_missionMarkerName","_missionType","_picture","_vehicleName","_hint","_waypoint","_waypoints","_group","_vehicles","_marker","_failed","_startTime","_numWaypoints","_ammobox","_createVehicle","_leader"];
 
 #include "mainMissionDefines.sqf"
 
@@ -15,48 +15,54 @@ diag_log format["WASTELAND SERVER - Main Mission Resumed: %1", _missionType];
 
 _group = createGroup civilian;
 
-// Add vehicles
-_vehicles = [];
-_vehicles set [0, "B_Hunter_HMG_F" createVehicle [3272.0862, 6818.0166, 4.1839767]];
-_vehicles set [1, "B_Hunter_F" createVehicle [3256.6409, 6823.4746, 3.8003173]];
-_vehicles set [2, "B_Hunter_RCWS_F" createVehicle [3240.3447, 6829.6089, 4.275979]];
-
-{
-    _x setDir 110;
-    _group addVehicle _x;
-    clearMagazineCargoGlobal _x;
-    clearWeaponCargoGlobal _x;
-} forEach _vehicles;
-
-// Soldiers for all vehicles
-{
-    _vehicle = _x;
-    _vehiclePosition = position _vehicle;
+// Factory function for vehicle creation
+_createVehicle = {
+    private ["_type","_position","_direction","_group","_vehicle","_soldier"];
     
-    _soldier = [_group, _vehiclePosition] call createRandomSoldier; 
+    _type = _this select 0;
+    _position = _this select 1;
+    _direction = _this select 2;
+    _group = _this select 3;
+    
+    _vehicle = _type createVehicle _position;
+    _vehicle setDir _direction;
+    clearMagazineCargoGlobal _vehicle;
+    clearWeaponCargoGlobal _vehicle;
+    _group addVehicle _vehicle;
+    
+    // Spawn crew
+    _soldier = [_group, _position] call createRandomSoldier; 
     _soldier moveInDriver _vehicle;
-    _soldier setRank "LIEUTENANT";
-    
-    _soldier = [_group, _vehiclePosition] call createRandomSoldier;
-    
+    _soldier = [_group, _position] call createRandomSoldier; 
+    _soldier moveInCargo [_vehicle, 0];
+    _soldier = [_group, _position] call createRandomSoldier; 
+    _soldier moveInCargo [_vehicle, 1];
+    _soldier = [_group, _position] call createRandomSoldier; 
     if (_vehicle isKindOf "B_Hunter_F") then {
-        _soldier moveInCargo _vehicle;
+        _soldier moveInCargo [_vehicle, 2];
     } else {
         _soldier moveInTurret [_vehicle, [0]];
-        _soldier setRank "SERGEANT";
     };
     
-    _soldier = [_group, _vehiclePosition] call createRandomSoldier; 
-    _soldier moveInCargo _vehicle;
-    
-    _soldier = [_group, _vehiclePosition] call createRandomSoldier;
-    _soldier moveInCargo _vehicle;
-    
-} forEach _vehicles;
+    _vehicle
+};
 
+// Create vehicles
+_vehicles = [];
+_vehicles set [0, ["B_Hunter_HMG_F", [3272.0862, 6818.0166, 4.1839767], 110, _group] call _createVehicle];
+_vehicles set [1, ["B_Hunter_F", [3256.6409, 6823.4746, 3.8003173], 110, _group] call _createVehicle];
+_vehicles set [2, ["B_Hunter_RCWS_F", [3240.3447, 6829.6089, 4.275979], 110, _group] call _createVehicle];
+
+// Set the driver of the first vehicle as leader
+_leader = driver (_vehicles select 0);
+_group selectLeader _leader;
+_leader setRank "LIEUTENANT";
+
+// Set default group behaviour
 _group setCombatMode "GREEN";
 _group setBehaviour "SAFE";
-_group setSpeedMode "NORMAL";
+_group setFormation "STAG COLUMN";
+_group setSpeedMode "LIMITED";
 
 // Add waypoints
 _waypoints = [
@@ -84,9 +90,9 @@ _waypoints = [
     _waypoint setWaypointType "MOVE";
     _waypoint setWaypointCompletionRadius 50;
     _waypoint setWaypointCombatMode "GREEN"; // Defensiv behaviour
-    _waypoint setWaypointFormation "COLUMN";
     _waypoint setWaypointBehaviour "SAFE"; // Force convoy to normaly drive on the street.
-    _waypoint setWaypointSpeed "NORMAL";
+    _waypoint setWaypointFormation "STAG COLUMN";
+    _waypoint setWaypointSpeed "LIMITED";
 } forEach _waypoints;
 
 // Create marker
