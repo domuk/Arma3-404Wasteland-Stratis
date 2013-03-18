@@ -14,11 +14,7 @@ private ["_result","_missionMarkerName","_missionType","_startTime","_returnData
 _result = 0;
 _missionMarkerName = "Truck_Marker";
 _missionType = "Abandoned Truck";
-#ifdef __A2NET__
-_startTime = floor(netTime);
-#else
 _startTime = floor(time);
-#endif
 
 diag_log format["WASTELAND SERVER - Side Mission Started: %1",_missionType];
 
@@ -44,11 +40,7 @@ _hint = parseText format ["<t align='center' color='%4' shadow='2' size='1.75'>S
 [nil,nil,rHINT,_hint] call RE;
 
 diag_log format["WASTELAND SERVER - Side Mission Waiting to be Finished: %1",_missionType];
-#ifdef __A2NET__
-_startTime = floor(netTime);
-#else
 _startTime = floor(time);
-#endif
 waitUntil
 {
     sleep 1; 

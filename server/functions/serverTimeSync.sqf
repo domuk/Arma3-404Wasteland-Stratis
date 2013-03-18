@@ -11,11 +11,7 @@ currentDate = _dateStamp;
 publicVariable "currentDate";
 private ["_startTime"];
 
-#ifdef __A2NET__
-_startTime = netTime;
-#else
 _startTime = time;
-#endif
 
 while{true} do
 {	

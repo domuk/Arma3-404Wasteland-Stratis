@@ -8,11 +8,7 @@ diag_log format["WASTELAND SERVER - Started Mission State"];
 _MMarray = [];
 
 worldMissionRunning = false;
-#ifdef __A2NET__
-_startTime = floor(netTime);
-#else
 _startTime = floor(time);
-#endif
 _result = 0;
 
 while {true} do

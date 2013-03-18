@@ -44,12 +44,14 @@ player addEventHandler ["Killed", {[_this] call onKilled;}];
 waituntil {!(IsNull (findDisplay 46))};
 (findDisplay 46) displaySetEventHandler ["KeyDown", "_this call onKeyPress"];
 
-"currentDate" addPublicVariableEventHandler {[] call timeSync};
-"messageSystem" addPublicVariableEventHandler {[] call serverMessage};
-"clientMissionMarkers" addPublicVariableEventHandler {[] call updateMissionsMarkers};
-"clientRadarMarkers" addPublicVariableEventHandler {[] call updateRadarMarkers};
-"pvar_teamKillList" addPublicVariableEventHandler {[] call updateTeamKiller};
-"publicVar_teamkillMessage" addPublicVariableEventHandler {if(local(_this select 1)) then {[] spawn teamkillMessage;};};
+if (!X_Server) then {
+    "currentDate" addPublicVariableEventHandler {[] call timeSync};
+    "messageSystem" addPublicVariableEventHandler {[] call serverMessage};
+    "clientMissionMarkers" addPublicVariableEventHandler {[] call updateMissionsMarkers};
+    "clientRadarMarkers" addPublicVariableEventHandler {[] call updateRadarMarkers};
+    "pvar_teamKillList" addPublicVariableEventHandler {[] call updateTeamKiller};
+    "publicVar_teamkillMessage" addPublicVariableEventHandler {if(local(_this select 1)) then {[] spawn teamkillMessage;};};
+};
 
 //client Executes
 //[] execVM "client\functions\initSurvival.sqf";

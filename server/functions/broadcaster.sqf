@@ -7,11 +7,6 @@
 if(!X_Server) exitWith {};
 
 #include "setup.sqf"
-#ifdef __A2NET__
-call arma2NetTime;
-waituntil{netTime > 0};
-missionStartTime = netTime;
-#endif
 
 while {true} do {
 	#ifdef __A2NET__
@@ -21,6 +16,7 @@ while {true} do {
 	
     //To broadcast clientRaderMarkers to clients from the server due to clients not being able to broadcast server wide variables with eventhandlers.	
 	publicVariable "currentInvites";
+	if (!isDedicated) then { call updateRadarMarkers };
     publicVariable "clientRadarMarkers";
 	serverFPS = str(diag_fpsmin);
 	publicVariable "serverFPS";
