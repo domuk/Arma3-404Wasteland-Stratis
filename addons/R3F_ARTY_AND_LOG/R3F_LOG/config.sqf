@@ -27,12 +27,12 @@
  */
 R3F_LOG_CFG_remorqueurs = [
 	"c_offroad",
-	"O_Galkin_MG_F",
+	"O_Ifrit_MG_F",
     "B_Hunter_F",
     "B_Hunter_RCWS_F",
     "B_Hunter_HMG_F",
-    "O_Galkin_F",
-    "O_Galkin_GMG_F"
+    "O_Ifrit_F",
+    "O_Ifrit_GMG_F"
 ];
 
 /**
@@ -41,12 +41,12 @@ R3F_LOG_CFG_remorqueurs = [
  */
 R3F_LOG_CFG_objets_remorquables = [
 	"c_offroad",
-	"O_Galkin_MG_F",
+	"O_Ifrit_MG_F",
     "B_Hunter_F",
     "B_Hunter_RCWS_F",
     "B_Hunter_HMG_F",
-    "O_Galkin_F",
-    "O_Galkin_GMG_F"
+    "O_Ifrit_F",
+    "O_Ifrit_GMG_F"
 ];
 
 /****** LIFT WITH VEHICLE / HELIPORTER AVEC VEHICULE ******/
@@ -69,12 +69,12 @@ R3F_LOG_CFG_heliporteurs = [
 R3F_LOG_CFG_objets_heliportables = [
 
 	"c_offroad",
-	"O_Galkin_MG_F",
+	"O_Ifrit_MG_F",
     "B_Hunter_F",
     "B_Hunter_RCWS_F",
     "B_Hunter_HMG_F",
-    "O_Galkin_F",
-    "O_Galkin_GMG_F"
+    "O_Ifrit_F",
+    "O_Ifrit_GMG_F"
 ];
 
 
@@ -109,12 +109,12 @@ R3F_LOG_CFG_objets_heliportables = [
  */
 R3F_LOG_CFG_transporteurs = [
 	["c_offroad", 30],
-	["O_Galkin_MG_F", 20],
+	["O_Ifrit_MG_F", 20],
 	["B_Hunter_F", 20],
 	["B_Hunter_RCWS_F", 20],
 	["B_Hunter_HMG_F", 20],
-	["O_Galkin_F", 20],
-	["O_Galkin_GMG_F", 20],
+	["O_Ifrit_F", 20],
+	["O_Ifrit_GMG_F", 20],
 	["O_Ka60_Unarmed_F", 10],
 	["B_MH9_F", 10],
 	["O_Ka60_F", 10],
