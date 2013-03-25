@@ -21,7 +21,7 @@ diag_log format["WASTELAND SERVER - Started Main Mission State"];
     [mission_Outpost,"mission_Outpost"],
     [mission_RadarTruck,"mission_RadarTruck"]];
 */
-_MainMissions = [
+_MMarray = [
 	[mission_ArmedHeli,"mission_ArmedHeli"],
 	[mission_LightArmVeh,"mission_LightArmVeh"],
 	[mission_CivHeli,"mission_CivHeli"],
