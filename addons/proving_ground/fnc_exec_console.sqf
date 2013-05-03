@@ -61,7 +61,7 @@ switch (_mode) do {
 			GET_CTRL(balca_debug_console_history_IDC) lbAdd str _command;
 			GET_CTRL(balca_debug_console_history_IDC) lbSetData [(lbSize GET_CTRL(balca_debug_console_history_IDC))-1,_command];
 		};
-		player setVehicleInit _command;
+		[player, _command] spawn fn_vehicleInit;
 		processInitCommands;
 	};
 	case 5: {//exec on server
@@ -75,7 +75,7 @@ switch (_mode) do {
 			GET_CTRL(balca_debug_console_history_IDC) lbSetData [(lbSize GET_CTRL(balca_debug_console_history_IDC))-1,_command];
 		};
 		player setVariable ['PG_result',[]];
-		player setVehicleInit ("if isServer then {this setVariable [""PG_result"",[call {"+_command+"}],true]}");
+		[player, "if isServer then {this setVariable [""PG_result"",[call {"+_command+"}],true]}"] spawn fn_vehicleInit;
 		processInitCommands;
 
 		[] spawn {

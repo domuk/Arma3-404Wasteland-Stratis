@@ -74,13 +74,14 @@ if ((_uid in moderators) OR (_uid in administrators) OR (_uid in serverAdministr
 		{
 			_warnText = ctrlText _warnMessage;
 	        _playerName = name player;
-			_target setVehicleInit format["if (name player == ""%2"") then {titleText [""Admin %3: %1"", ""plain""]; titleFadeOut 10;};",_warnText,name _target,_playerName];
+			[_target, format ["if (name player == ""%2"") then {titleText [""Admin %3: %1"", ""plain""]; titleFadeOut 10;};",_warnText,name _target,_playerName]] spawn fn_vehicleInit;
+			
 	        processInitCommands;
 	        clearVehicleInit _target;
 		};
 	    case 2: //Slay
 	    {
-			_target setVehicleInit format["if (name player == ""%1"") then {player setdamage 1; Endmission ""END1"";failMission ""END1"";forceEnd; deletevehicle player;};",name _target];
+			[_target, format ["if (name player == ""%1"") then {player setdamage 1; Endmission ""END1"";failMission ""END1"";forceEnd; deletevehicle player;};",name _target]] spawn fn_vehicleInit;
 			processInitCommands;
 			clearVehicleInit _target;
 	    };
@@ -94,11 +95,11 @@ if ((_uid in moderators) OR (_uid in administrators) OR (_uid in serverAdministr
 					pvar_teamSwitchList = pvar_teamSwitchList - ["REMOVETHISCRAP"];
 			        publicVariableServer "pvar_teamSwitchList";
 	                
-	                _target setVehicleInit format["if (name player == ""%1"") then {client_firstSpawn = nil;};",name _target];
+	                [_target, format ["if (name player == ""%1"") then {client_firstSpawn = nil;};",name _target]] spawn fn_vehicleInit;
 			        processInitCommands;
 			        clearVehicleInit _target;
 	                
-	                player setVehicleInit format["if isServer then {publicVariable 'pvar_teamSwitchList';};"];
+	                [player, format ["if isServer then {publicVariable 'pvar_teamSwitchList';};"]] spawn fn_vehicleInit;
 			        processInitCommands;
 			        clearVehicleInit player;         
 			    };
@@ -114,7 +115,7 @@ if ((_uid in moderators) OR (_uid in administrators) OR (_uid in serverAdministr
 					pvar_teamKillList = pvar_teamKillList - ["REMOVETHISCRAP"];
 			        publicVariableServer "pvar_teamKillList"; 
 	                
-	                player setVehicleInit format["if isServer then {publicVariable 'pvar_teamKillList';};"];
+	                [player, format ["if isServer then {publicVariable 'pvar_teamKillList';};"]] spawn fn_vehicleInit;
 			        processInitCommands;
 			        clearVehicleInit player;       
 			    };

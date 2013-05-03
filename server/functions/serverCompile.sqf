@@ -47,6 +47,7 @@ createCargoItem = compile preprocessFileLineNumbers "server\missions\factoryMeth
 defendArea = compile preprocessFileLineNumbers "server\functions\defendArea.sqf";
 
 //Spawning Compiles
+fn_vehicleInit = compile preprocessFileLineNumbers "server\functions\fn_vehicleInit.sqf";
 randomWeapons = compile preprocessFileLineNumbers "server\spawning\randomWeapon.sqf";
 vehicleCreation = compile preprocessFileLineNumbers "server\spawning\vehicleCreation.sqf";
 objectCreation = compile preprocessFileLineNumbers "server\spawning\objectCreation.sqf";
