@@ -26,7 +26,7 @@ else
 	
 	R3F_LOG_objet_selectionne = objNull;
 	
-	private ["_objet", "_est_calculateur", "_arme_principale", "_action_menu_release_relative", "_action_menu_release_horizontal" , "_action_menu_45", "_action_menu_90", "_action_menu_180", "_azimut_canon"];
+	private ["_objet", "_est_calculateur", "_arme_principale", "_arme_principale_accessoires", "_arme_principale_magasines", "_action_menu_release_relative", "_action_menu_release_horizontal" , "_action_menu_45", "_action_menu_90", "_action_menu_180", "_azimut_canon", "_muzzles", "_magazine", "_ammo"];
 	
 	_objet = _this select 0;
 	if(isNil {_objet getVariable "R3F_Side"}) then {
@@ -58,8 +58,24 @@ else
 		
 		// Sauvegarde et retrait de l'arme primaire
 		_arme_principale = primaryWeapon player;
+		_arme_principale_accessoires = [];
+		_arme_principale_magasines = [];
+		
 		if (_arme_principale != "") then
 		{
+			_arme_principale_accessoires = primaryWeaponItems player;
+			
+			player selectWeapon _arme_principale;
+			_arme_principale_magasines set [0, [currentMagazine player, player ammo _arme_principale]];
+			
+			{ // add one mag for each muzzle
+				if (_x != "this") then {
+					diag_log format["%1", player ammo _x];
+					player selectWeapon _x;
+					_arme_principale_magasines set [count _arme_principale_magasines, [currentMagazine player, player ammo _x]];
+				};
+			} forEach getArray(configFile>>"CfgWeapons">>_arme_principale>>"muzzles");
+			
 			player playMove "AidlPercMstpSnonWnonDnon04";
 			sleep 1.5;
 			player removeWeapon _arme_principale;
@@ -124,10 +140,7 @@ else
 				if ([0,0,0] distance (velocity player) > 3.5) then
 				{
 					player globalChat STR_R3F_LOG_courir_trop_vite;
-
-					if((currentWeapon player) in ["M9", "M9SD", "Colt1911", "Makarov", "MakarovSD", "Sa61_EP1", "UZI_EP1", "UZI_SD_EP1", "revolver_EP1", "revolver_gold_EP1", "glock17_EP1"])
-					then {player playMove "amovpercmstpsraswpstdnon_amovppnemstpsraswpstdnon";} else {player playMove "AmovPpneMstpSnonWnonDnon"};
-
+					player playMove "AmovPpneMstpSrasWpstDnon";
 					sleep 1;
 				};
 				
@@ -174,8 +187,24 @@ else
 				if(primaryWeapon player != "") then {
 					_o = createVehicle ["WeaponHolder", player modelToWorld [0,0,0], [], 0, "NONE"];
 					_o addWeaponCargoGlobal [_arme_principale, 1];
-				} else {
+				}
+				else {					
+					{
+						_magazine = _x select 0;
+						_ammo = _x select 1;
+						if(_magazine != "" && _ammo > 0) then {
+							player addMagazine _x;
+						};
+					} forEach _arme_principale_magasines; // add all default primary weapon magazines
+					
 					player addWeapon _arme_principale;
+					
+					{
+						if(_x!="") then {
+							player addPrimaryWeaponItem _x;
+						};
+					} forEach _arme_principale_accessoires;
+					
 					player selectWeapon _arme_principale;
 					player selectWeapon (getArray (configFile >> "cfgWeapons" >> _arme_principale >> "muzzles") select 0);
 				};
